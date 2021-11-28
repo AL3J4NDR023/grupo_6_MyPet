@@ -1,5 +1,5 @@
 # grupo_6_MyPet
-## Proyecto integrador equipo 6 - Digital House
+### Proyecto integrador equipo 6 - Digital House
 
 ## Descripción del proyecto
 ### Productos
