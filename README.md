@@ -14,3 +14,9 @@
 #### Luis Fernando Jimenez: Ingeniero químico, apasionado por el futbol.
 #### Alejandro Londoño: Estudiante de ingeniería electrónica, con gusto la música.
 
+## Referencias
+#### https://www.allivet.com - Nos gusta la estructura de la página, las opciones que tiene y categorias, además que es visualmente agradable.
+#### https://www.agrocampo.com.co - Página muy completa, con un buen diseño.
+#### https://www.dog.com - Nos gustaron las secciones del home para noticias y recomendaciones.
+#### https://www.kanu.pet - Página con una buena organización donde es fácil acceder a los produtos deseados.
+#### https://www.laika.com.co - Página simple que ha sido muy aceptada por los usuarios.
