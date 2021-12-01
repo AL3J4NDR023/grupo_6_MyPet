@@ -20,3 +20,10 @@
 #### https://www.dog.com - Nos gustaron las secciones del home para noticias y recomendaciones.
 #### https://www.kanu.pet - Página con una buena organización donde es fácil acceder a los produtos deseados.
 #### https://www.laika.com.co - Página simple que ha sido muy aceptada por los usuarios.
+
+# Wireframes
+## Página de inicio: https://www.figma.com/file/3WsJz5nuVfdsWkB2YNUoDz/Untitled?node-id=3%3A2
+## Página de producto: 
+## Fórmularios de Registro y Login:
+## Carrito de compras: https://www.figma.com/file/B1OHs2kO8LeS95KmArJs8D/CARRITO?node-id=0%3A1
+## Paleta de colores :
