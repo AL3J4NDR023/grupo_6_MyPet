@@ -21,16 +21,10 @@
 #### https://www.kanu.pet - Página con una buena organización donde es fácil acceder a los produtos deseados.
 #### https://www.laika.com.co - Página simple que ha sido muy aceptada por los usuarios.
 
-# Wireframes
-## Página de inicio: https://www.figma.com/file/3WsJz5nuVfdsWkB2YNUoDz/Untitled?node-id=3%3A2
-## Página de producto: 
-## Fórmularios de Registro y Login:
-## Carrito de compras: https://www.figma.com/file/B1OHs2kO8LeS95KmArJs8D/CARRITO?node-id=0%3A1
-## Paleta de colores : https://coolors.co/008074-00aa9b-4cc4bc-7fd5d2-b1e6e8-d0e7e7
-## Logo: https://www.figma.com/file/2DBf42y8dMjEY0C63HqEj2/Untitled?node-id=0%3A1
 ## Wireframes
 #### Página de inicio: https://www.figma.com/file/3WsJz5nuVfdsWkB2YNUoDz/Untitled?node-id=3%3A2
-#### Página de producto: https://www.figma.com/file/95WRvvPgm4oSfilcFQywcp/Detalle-del-producto?node-id=0%3A1 
-#### Fórmularios de Registro y Login: https://wireframe.cc/pro/pp/39cd45cb7498550
+#### Página de producto: 
+#### Fórmularios de Registro y Login:
 #### Carrito de compras: https://www.figma.com/file/B1OHs2kO8LeS95KmArJs8D/CARRITO?node-id=0%3A1
-#### Paleta de colores :
+#### Paleta de colores : https://coolors.co/008074-00aa9b-4cc4bc-7fd5d2-b1e6e8-d0e7e7
+#### Logo: https://www.figma.com/file/2DBf42y8dMjEY0C63HqEj2/Untitled?node-id=0%3A1
