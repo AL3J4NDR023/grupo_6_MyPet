@@ -26,4 +26,5 @@
 ## Página de producto: 
 ## Fórmularios de Registro y Login:
 ## Carrito de compras: https://www.figma.com/file/B1OHs2kO8LeS95KmArJs8D/CARRITO?node-id=0%3A1
-## Paleta de colores :
+## Paleta de colores : https://coolors.co/008074-00aa9b-4cc4bc-7fd5d2-b1e6e8-d0e7e7
+## Logo: https://www.figma.com/file/2DBf42y8dMjEY0C63HqEj2/Untitled?node-id=0%3A1
