@@ -1,0 +1,164 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*CADA VEZ QUE EMPIEZO UN NUEVO PROYECTO DEBO NORMALIZAR MIS ESTILOS, ESTO SE HACE DE PRIMERO*/
+/* NORMALIZACIÓN */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    --verde-agua-marina: #00AA9B;
+    --negro: #000; 
+    --agua-marina-claro: #B1E6E8;
+    --gris-oscuro: #666;
+    --blanco: #fff;
+    --azul-oscuro: #000a23;
+    /* TAMAÑO FUNETES */
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* FAMILIA DE FUENTES */
+    --roboto: "Roboto", sans-serif;
+}
+/*ESTILOS COMUNES*/
+html{
+    font-size: 62.5%;
+    font-family: var(--roboto);
+}
+body{
+    background-color: var(--blanco);
+}
+
+h3{
+    font-size:var(--title-lg);
+}
+
+p{
+    font-size: var(--text-md);
+}
+/*HEADER*/
+header{
+    background-color: var(--verde-agua-marina);
+}
+.top-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+header div.logo {
+    display:block;
+    width: 15%;
+    justify-content:flex-start;
+  }
+
+  .form{
+    width: 50%;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  header button{
+    cursor: pointer;
+  }
+  
+  .form .input{
+    width: 80%;
+  }
+
+  header nav.nav-header{
+      display: flex;
+      justify-content: space-between;
+      width: 65%;
+  }
+
+  header nav.nav-header ul  {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    margin-top: -4%;
+    padding: 0% 4%;
+    width: 100%;
+    gap: 20px;
+    padding: 30px 0 10px 0;
+  }
+  
+  header nav.nav-header ul li a {
+    
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-size: var(--text-sm);
+    font-weight: bold;
+  }
+  header nav.nav-header ul li{
+      transition: all 0.5s ease;
+  }
+  header nav.nav-header ul li:hover{
+    padding: 5px 5px;
+    background-color: var(--agua-marina-claro);
+    border-radius: 15px;
+  }
+  header form input {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    padding: 5px;
+    border-radius: 10px;  
+    width: 100%;
+  }
+  header div.form-header{
+      display: flex;
+      justify-content: center;
+  }
+  header form button {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width: 18px;
+    padding: 2px;
+    border-radius: 3px;  
+  }
+
+/* BANNER */
+
+div.banner img{
+    width: 100%;
+    height: 130px;
+}
+
+/* NAVEGACION */
+.menu-nav{
+    background-color: var(--verde-agua-marina);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+nav.menu-nav li{
+    display: inline-block;
+    margin: 1px;
+    height: 30px;
+}
+
+nav.menu-nav li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--text-md);
+    transition: all 0.5s ease;
+    color: var(--azul-oscuro);
+    margin: 0px 10px;
+    display: flex;
+}
+
+nav.menu-nav li a:hover{
+    padding: 5px 10px;
+    background-color: var(--agua-marina-claro);
+    border-radius: 15px;
+}
