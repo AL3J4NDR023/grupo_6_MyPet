@@ -39,43 +39,53 @@
         </nav>
     </header>
     <main>
-        <section class="vista-producto">
-            <h3>Carrito de Compras</h3>
-            <article>
-                <div class="caja-precios">
-                    <h4>#Descripción producto</h4>
-                    <p>Precio unitario</p>
-                    <p>Cantidad</p>
-                    <p>Precio</p>
-                </div>
-                <img src="producto" alt="imagen producto" class="product-select">
-                <div class="seguir-comprando">
-                    <h4><i class="fas fa-arrow-alt-circle-left"></i><a href="#">Seguir Comprando</a></h4>
-                </div>
-            </article>
-        </section>
-        <section class="detalle">
-            <h3>Detalles de Compra</h3>
-            <article>
-                <div class="caja-precio">
-                    <p>Subtotal:</p>
-                    <p>Envío:</p>
-                </div>
-                <div class="total">
-                    <h4>Total:</h4>
-                </div>
-                <div class="finalizar-compra">
-                    <h4>FINALIZAR COMPRA</h4>
-                </div>
-            </article>
-        </section>
+        <div class="vista-main">
+            <section class="vista-producto">
+                <h3>Carrito de Compras</h3>
+                <article>
+                    <div class="cajas-precios">
+                        <div class="caja-descripcion">
+                            <h4>#Descripción producto</h4>
+                            <p>Precio unitario</p>
+                            <p>Cantidad</p>
+                            <p>Precio</p>
+                        </div>
+                        <div class="contenedor-img">
+                            <img src="/images/comidaperros.png" alt="imagen producto" class="product-select">
+                        </div>
+                        <form action="/" method="post">
+                            <input type="submit" value="SEGUIR COMPRANDO" class="btn-return">
+                        </form>
+                    </div>
+                </article>
+            </section>
+            <section class="detalle">
+                <h3>Detalles de Compra</h3>
+                <article>
+                    <div class="cajas-precios">
+                        <div>
+                            <p>Subtotal:</p>
+                            <p>Envío:</p>
+                        </div>
+                        <div class="total">
+                            <h4>Total:</h4>
+                        </div>
+                        <div class="finalizar-compra">
+                            <form action="/" method="post">
+                                <input type="submit" value="FINALIZAR COMPRA" class="btn-return">
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
         <section class="mas-vendidos">
             <h3>Productos mas vendidos</h3>
             <article>
                 <div>
-                    <img src="producto1" alt="Imagen producto 1">
-                    <img src="producto2" alt="Imagen producto 2">
-                    <img src="producto3" alt="Imagen producto 3">
+                    <img src="/images/ringo.png" alt="imagen producto1" class="product-select">
+                    <img src="/images/shampoo.png" alt="imagen producto2" class="product-select">
+                    <img src="/images/tapetes.png" alt="imagen producto3" class="product-select">
                 </div>
             </article>
         </section>
@@ -95,7 +105,7 @@
         </section>
         <section class="contacto">
             <article>
-                <h4>Categorías</h4>
+                <h4>Contacto</h4>
                 <div class="main-contacto">
                     <p>Telefono: 27383929</p>
                     <p>mypet@gmail.com</p>
@@ -105,7 +115,7 @@
         </section>
         <section class="Ayuda">
             <article>
-                <h4>Categorías</h4>
+                <h4>Ayuda</h4>
                 <div class="main-ayuda">
                     <ul>
                         <li><a href="#">Sobre MyPet</a></li>
