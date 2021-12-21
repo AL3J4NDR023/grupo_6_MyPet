@@ -1,75 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bienvenido a MyPet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="stylecarrito.css">
-</head>
-<body>
-    <header>
-        <div class="top-header">
-            <div class="logo"><img src="/images/opc1.png" alt="logo página"></div>
-            <div class="form" action="#" method="GET">
-                <div class="input"><p>Buscar producto <i class="fa fa-search"></i></p></div>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidos a MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="top-header">
+                <div class="logo"> 
+                    <img src="images/logoindex.svg" alt="Mypet">
+                </div>
+                <form class="form" action="#" method="GET">
+                    <input type="text" name="busqueda"placeholder="Buscar productos, marcas y más">
+                    <button type="submit"> <i class="fa fa-search"></i></button>
+                </form>
+                
             </div>
-            <ul class="top-header-menu">
-                <li><a href="#"><i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="/carrito"><i class="fas fa-cart-arrow-down"></i></i></a></li>
-            </ul>
+            <nav class="nav">
+                
+                <ul>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    
+                </ul>
+                <ul>
+                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="images/banner.png" alt="Banner de ofertas">
+        </section>
+        <main>
+            <section class="last-visit">
+                <h3>Basado en tu última visita</h3>
+                <div class="products" >
+                    <article>
+                        <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$6.770</p>
+                            <p class="discount">40% off</p>
+                        </div>
+                            <h4 class="description">Cafetera Moulinex</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/comidaperros.png" alt="MacBook" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$230.000</p>
+                            <p class="discount">20% off</p>
+                            </div>
+                            <h4 class="description">MacBook Pro 2019</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/comidaperros.png" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$70.500</p>
+                            <p class="discount">10% off</p>
+                            </div>
+                            <h4 class="description">Samsung Galaxy S10</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/comidaperros.png" alt="SmartTv Samsung" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$23.200</p>
+                            <p class="discount">5% off</p>
+                            </div>
+                            <h4 class="description">SmartTv Samsung 43"</h4>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="offers">
+                <h3>Ofertas</h3>
+                <div class="products">
+                    <article>
+                        <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$20.770</p>
+                            <p class="discount">40% off</p>
+                            </div>
+                            <div clas="des">
+                            <h4 class="description">Dogourmet Adulto</h4>
+                        </div>
+
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/tapetes.png" alt="MacBook" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$35.000</p>
+                            <p class="discount">20% off</p>
+                            </div>
+                            <h4 class="description">Tapetes Absorbentes</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/shampoo.png" alt="shampoo" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$12.000</p>
+                            <p class="discount">10% off</p>
+                            </div>
+                        <h4 class="description">Shampoo Petys</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="images/ringo.png" alt="comidaringo" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <div class="flex-row">
+                            <p class="price">$35.200</p>
+                            <p class="discount">5% off</p>
+                            </div>
+                            <h4 class="description">Comida Ringo - Adulto</h4>
+                        </div>
+                    </article>
+                </div>  
+            </section>
+
+            <section >
+                <h2>Noticias</h2>
+                <div class="nt">
+                    <div>
+                <img src="images/logo.png" alt="img_noticias">
+                 <p>lorem ipsum dolor sit amet, consectetur adip lorem lorem. Cum sociosqu ad litora torquent per con</p> 
+            </div>
+                <div>
+                <img src="images/logo.png" alt="img_noticias">
+                 <p>lorem ipsum dolor sit amet, consectetur adip lorem lorem. Cum sociosqu ad litora torquent per con</p> 
+            </div>
         </div>
-        <div class="banner">
-            <img src="images/opc1.png" alt="banner">
-        </div>
-        <nav class="menu-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        
-    </main>
-    <footer>
-        <section class="categorias">
-            <article>
-                <h4>Categorías</h4>
-                <div class="main-categoria">
-                    <ul>
-                        <li><a href="#">Par Perros</a></li>
-                        <li><a href="#">Para Gatos</a></li>
-                        <li><a href="#">Otros productos</a></li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-        <section class="contacto">
-            <article>
-                <h4>Categorías</h4>
-                <div class="main-contacto">
-                    <p>Telefono: 27383929</p>
-                    <p>mypet@gmail.com</p>
-                    <p>Colombia</p>
-                </div>
-            </article>
-        </section>
-        <section class="Ayuda">
-            <article>
-                <h4>Categorías</h4>
-                <div class="main-ayuda">
-                    <ul>
-                        <li><a href="#">Sobre MyPet</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Trabaje con nosotros</a></li>
-                        <li><a href="#">Terminos y condiciones</a></li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-    </footer>
+            </section>
+        </main>
+  <footer>
+    <section>
+        <p> Copyright © 2020-2021 Mypet S.A</p>
+    </section>
+  </footer>
 </body>
 </html>
