@@ -1,6 +1,6 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
 /* NORMALIZACIÓN */
 * {
   margin: 0;
@@ -29,7 +29,7 @@
   --roboto: "Roboto", sans-serif;
 }
 body{
-  background-color: var(--gris-claro)
+  background-color: var(--blanco)
 }
 /* ESTILOS COMUNES */
 
@@ -48,54 +48,129 @@ p {
 /* CABECERA */
 
 header {
-  background-color: var(--azul-claro);
+  background-color: #c8ee3d;
  
 }
 
-div.top-header {
-  padding: 5%;
-  display:flex;
-  flex-wrap: nowrap;
-  align-items:center;
-  gap: 40px;
-  padding-top: 2%;
+.top-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
 }
-header div .logo {
-    display: block;
-    width: 40%;
-    padding: 2px;
+header div.logo {
+  display:block;
+  width: 60%;
+  justify-content:flex-start;
 }
-header div img {
-    display: block;
-    width: 100%;
-    padding: 1px;
+
+header div.logo img {
+  width: 50%;
 }
-  .form{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .form .input{
-    width: 80%;
-  }
-  header nav {
-    display: flex;
-    font-size: var(--text-sm);
+
+.form{
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+header button{
+  cursor: pointer;
+}
+
+.form .input{
+  width: 80%;
+}
+
+header nav.nav-header{
+    display: table-column;
     justify-content: space-between;
-   
-  }
+    width: 65%;
+}
+
+header nav.nav-header ul  {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  margin-top: -4%;
+  padding: 0% 4%;
+  width: 100%;
+  gap: 20px;
+  padding: 50px 0 40px 50%;
+}
+
+header nav.nav-header ul li a {
   
-  header ul  {
-    list-style-type: none;
-    list-style-type: none;
+  text-decoration: none;
+  color: var(--negro);
+  font-size: var(--text-sm);
+  font-weight: bold;
+}
+header nav.nav-header ul li{
+    transition: all 0.5s ease;
+}
+header nav.nav-header ul li:hover{
+  padding: 5px 5px;
+  background-color: #ddf396;
+  border-radius: 15px;
+}
+
+header form input {
+  background-color: var(--blanco);
+  border: 1px solid var(--negro);
+  color: var(--gris-oscuro);
+  padding: 5px;
+  border-radius: 10px;  
+  width: 100%;
+}
+header div.form-header{
     display: flex;
-    gap: 10px;
     justify-content: center;
-    margin-top: -4%;
-    padding: 0% 4%;
-  }
+}
+header form button {
+  background-color: var(--blanco);
+  border: 1px solid var(--blanco);
+  width: 18px;
+  padding: 2px;
+  border-radius: 3px;  
+}
+
+.menu-nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2px;
+}
+
+nav.menu-nav li{
+  display: inline-block;
+  margin: 1px;
+  height: 30px;
+}
+
+nav.menu-nav li a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--text-md);
+  transition: all 0.5s ease;
+  color: var(--azul-oscuro);
+  margin: 0px 10px;
+  display: flex;
+}
+
+nav.menu-nav li a:hover{
+  padding: 5px 10px;
+  background-color: #000000;
+  border-radius: 15px;
+  color: #EAF4F4
+}
+nav.menu-nav  :hover{
+  background-color: #ddf396;
+  border-radius: 15px;
+}
+ 
   
   header ul li a {
     
@@ -161,7 +236,7 @@ article div.main-article{
       margin: 0 auto;
   }
   main section article{
-      background-color: #fff;    
+      background-color: #EAF4F4;    
       margin: 10px 0px;
   }
   main section article img{
@@ -220,6 +295,54 @@ article div.main-article{
 .nt div p{
   text-align: center;
 }
+/*footer*/
+/* FOOTER */
+footer{
+  padding: 10px;
+  background-color: #181414;
+  display: flex;
+  flex-wrap: wrap;
+  gap:15%;
+  color:var(--blanco);
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: start;
+  font-size:15px
+}
+footer .pagos{
+  font-size:90px
+}
+footer section h4{
+  font-size: 18px;
+  
+}
+footer p{
+ 
+  margin-top: 10px;
+}
+footer section article div.main-categoria{
+  padding-bottom: 10px;
+  
+}
+footer section article div.main-categoria ul{
+  list-style-type: none;
+}
+footer section article div.main-categoria ul li a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+footer section article div.main-ayuda{
+  padding-bottom: 10px;
+}
+
+footer section article div.main-ayuda ul li a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+footer section article div.main-ayuda ul{
+  list-style-type: none;
+}
+
+
 
  
 .flex-row{
@@ -240,7 +363,7 @@ article div.main-article{
       display:flex;
       flex-wrap:wrap;
       gap: 10px;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: flex-start;
     }
     .products article{
