@@ -279,6 +279,28 @@ article div.main-article{
     box-shadow: 0px 0px 10px rgb(100,100,100);
   }
 
+/*Notices*/
+.notices{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-start;
+  padding: 1%;
+    margin-bottom: 1%;
+ 
+} 
+
+.notices :hover{
+ font-size: 12px;
+ 
+} 
+.n1{
+  align-items: center;
+}
+
+
   div.nt{
     display: flex;
     gap: 10%;
