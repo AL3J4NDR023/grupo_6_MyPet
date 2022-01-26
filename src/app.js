@@ -16,6 +16,7 @@ app.listen(3001,()=>{  //correr servidor
 
 /*********************** EJS****************************** */
 app.set('view engine', 'ejs')// template engine - EJS
+app.set('views', 'src/views')// template engine - EJS
 
 /******************** ROUTES ********************/
 const homeRoutes = require('./routes/homeRoutes')

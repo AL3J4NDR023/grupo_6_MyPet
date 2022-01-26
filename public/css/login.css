@@ -1,6 +1,6 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+
 /* NORMALIZACIÓN */
 * {
   margin: 0;
@@ -10,28 +10,26 @@
 
 /* VARIABLES */
 
-:root {
-  /* colores */
-  --amarillo: #eac926;
-  --azul: #03264c;
-  --celeste: #1259c3;
+:root{
+  --verde-agua-marina: #00AA9B;
+  --azulito: #A3E4D7;
+  --negro: #000; 
+  --agua-marina-claro: #B1E6E8;
   --gris-oscuro: #666;
-  --gris-claro: #ebebeb;
-  --verde: #39b54a;
-  --negro: #000000;
-  --blanco: #ffffff;
-  --azul-claro: #2CA596;
-  --verde-claro: #ddf396;
-  --verde-fuerte: #c8ee3d;
+  --blanco: #fff;
+  --azul-oscuro: #000a23;
+  --grisclaro: #ebebeb;
+  /* TAMAÑO FUNETES */
   --text-sm: 1.2em;
   --text-md: 1.6em;
   --text-lg: 1.8em;
   --title-md: 2.4em;
-  /* familias de fuentes */
+  /* FAMILIA DE FUENTES */
   --roboto: "Roboto", sans-serif;
 }
+
 body{
-  background-color: var(--blanco)
+  background-color: var(--grisclaro);
 }
 /* ESTILOS COMUNES */
 
@@ -40,17 +38,33 @@ html {
   font-family: var(--roboto);
 }
 
-h3 {
+h2 {
+    text-align: center;
   font-size: var(--title-md);
+  padding: 2%;
 }
 
 p {
   font-size: var(--text-sm);
+  justify-content: right;
+  width: 50%;
+  padding-bottom: 10%;
 }
+
+main img {
+  display: none;
+  float: left;
+  width: 50%;
+  height: 486px;
+  margin: auto;
+
+}
+
 /* CABECERA */
 
+
 header {
-  background-color: var(--verde-fuerte);
+  background-color: #c8ee3d;
  
 }
 
@@ -115,7 +129,7 @@ header nav.nav-header ul li{
 }
 header nav.nav-header ul li:hover{
   padding: 5px 5px;
-  background-color: var(--verde-claro);
+  background-color: #ddf396;
   border-radius: 15px;
 }
 
@@ -169,7 +183,7 @@ nav.menu-nav li a:hover{
   color: #EAF4F4
 }
 nav.menu-nav  :hover{
-  background-color: var(--verde-claro);
+  background-color: #ddf396;
   border-radius: 15px;
 }
  
@@ -205,121 +219,55 @@ nav.menu-nav  :hover{
   section.banner img{
     width: 100%;
   }
-  /*MAIN*/
-article div.main-article{
-    width: 100%;
-  }
-  
-  .price{
-    font-size: 18px;
-  }
-  
-  .discount{
-    font-size: 16px;
-    font-weight: normal;
-    
-  }
-  .description{
-    font-size: 16px;
-    font-weight: normal;
-    transition: all 3s;
-    
-  }
-  
-  
-  
-  h3,
-  .description{
-    color: #666;
-  }
-  
-  main{
-      width: 90%;
-      margin: 0 auto;
-  }
-  main section article{
-      background-color: #EAF4F4;    
-      margin: 10px 0px;
-  }
-  main section article img{
-      width: 100%;
-  }
-  main section article i,
-  .discount{
-      color: #39B54A;
-  }
-  main section article div i{
-      display:block;
-      font-size: 16px;
-      padding: 5px;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #39B54A;
-      background-color: #FFF;
-      border-radius: 50%;
-      right: 45px;
-      position: absolute;
-      top: -15px;
-      transition:  transform 2s;
-  }
-      
-  main section article div i:hover {
-    transform: rotate(-90deg);
-  }
-  main section h3{
-      margin: 20px 0px;
-  }
-  article div.main-article{
-      width: 100%;
-      border-top: 1px solid #EBEBEB;
-      padding: 15px;
-      position: relative;
-  }
-  
-  
-  main section article:hover{
-    box-shadow: 0px 0px 10px rgb(100,100,100);
-  }
 
-/*Notices*/
-.notices{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1%;
-  justify-content: space-between;
-  text-align: center;
-  align-items: flex-start;
-  padding: 1%;
-    margin-bottom: 1%;
- 
-} 
 
-.notices :hover{
-  box-shadow: 0px 0px 10px rgb(100,100,100);
- 
-} 
-.n1{
-  align-items: center;
+/* MAIN */
+.photo{
+  width: 1%;
 }
 
+main {
+  height: 0%;
+}
 
-  div.nt{
-    display: flex;
-    gap: 10%;
-    
-  }
-.nt div {
+main form div{
+   
+  padding-top: 30px;
   display: flex;
-  width: 25%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1%
-} 
-
-.nt div p{
-  text-align: center;
+  grid-gap: 30px;
 }
-/*footer*/
+
+main form div input{
+
+  padding: 10px;
+  width: 70%;
+  border: var(--gris-claro);
+  border-radius: 10px;  
+
+}
+
+div .btn {
+  display: flex;
+  justify-content: center;
+  width: 57%;
+  padding-top: 0px;
+}
+
+div .btn input{
+  background-color: var(--azulito);
+  transition: background 0.5s ease;
+  cursor: pointer; 
+}
+
+div .btn input:hover{
+  background-color: var(--verde-agua-marina);
+  color: var(--blanco); 
+}
+
+/*FOOTER*/
+
 /* FOOTER */
 footer{
   padding: 6%;
@@ -328,7 +276,7 @@ footer{
   flex-wrap: wrap;
   gap:15%;
   color:var(--blanco);
-  font-family: 'Roboto Condensed', sans-serif;
+  
   text-align: start;
   font-size:15px
 }
@@ -361,80 +309,28 @@ footer section article div.main-ayuda{
 footer section article div.main-ayuda ul li a{
   text-decoration: none;
   color: var(--blanco);
+  
 }
 footer section article div.main-ayuda ul{
   list-style-type: none;
 }
 
-
-
- 
 .flex-row{
     display: flex;
     align-items: baseline;
     gap: 10px;
   }
-  @media (max-width: 361px){
-    .description{
-      display: none;
-    }
-    
-  }
-  @media (min-width: 361px){
-    
-    
-    .products{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-    .products article{
-      max-width: 45%;
-    }
-  
-  
-   
+
+/* RESPONSIVE */
+
+@media (min-width: 769px) {
+  main img {
+    display: block;
+    float: left;
+    width: 43%;
+    height: 1%;
+    margin: auto;
+    padding: 1%;
   
   }
-  @media (max-width: 769px){
-    main section article{
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-    header nav ul {
-      display: block;
-    }
-    .nav{
-      display: none;
-    }
-    div.top-header {
-      padding: 5%;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .form{
-      width: 50%;
-      display: flex;
-    }
-  }
-  
-  @media (min-width: 769px){
-  
-  
-    header div {
-      display: block;
-    }
-  
-    .burger-menu {
-      display: none;
-    }
-    
-    .products article{
-      max-width: 22%;
-    }
-  
-  }
-  
+}
