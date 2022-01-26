@@ -215,12 +215,12 @@ main{
 }
 
 main section{
-  background-color: var(--verde-muy-claro);
+  background-color: #EBEBEB;
   margin: 10px 0;
 }
 
 main section h3{
-  background-color: var(--verde);
+  background-color: var(--verde-fuerte);
   text-align: center;
 }
 main div h4{
@@ -262,7 +262,7 @@ main section article div.contenedor-img img{
   width: 25%;
 }
 .btn-return{
-  background-color: var(--verde);
+  background-color: var(--verde-fuerte);
   display: inline-flex;
   font-weight: 800;
   transition: all 0.5s ease;
@@ -274,7 +274,10 @@ main section article div.contenedor-img img{
 }
 
 .btn-return:hover{
-  background-color: var(--blanco);
+ 
+  background-color: #000000;
+  border-radius: 15px;
+  color: #EAF4F4
 }
 main section.mas-vendidos{
   padding-bottom: 10px;

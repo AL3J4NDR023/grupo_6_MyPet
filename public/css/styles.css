@@ -241,6 +241,14 @@ article div.main-article{
       background-color: #EAF4F4;    
       margin: 10px 0px;
   }
+  main section article a {
+    text-decoration: none;
+  }
+  
+  main section article a:hover {
+    text-decoration: underline;
+  }
+  
   main section article img{
       width: 100%;
   }

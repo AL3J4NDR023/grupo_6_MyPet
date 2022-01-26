@@ -10,6 +10,9 @@ const controller ={
     },
     register: (req,res)=>{
       return res.render(path.join(__dirname,'../views/register'));
+    }, 
+    carrito: (req,res)=>{
+      return  res.render(path.join(__dirname,'../views/carrito'));
     }
 }
 

@@ -2,7 +2,7 @@ const path=require("path");
 
 const controller={
     products: (req,res)=>{
-       res.sendFile(path.join(__dirname,'../views/products.html'));
+      return res.render(path.join(__dirname,'../views/products'));
     }
 }
 module.exports = controller; 
