@@ -1,0 +1,389 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*CADA VEZ QUE EMPIEZO UN NUEVO PROYECTO DEBO NORMALIZAR MIS ESTILOS, ESTO SE HACE DE PRIMERO*/
+/* NORMALIZACIÓN */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+     /* colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --azul-claro: #2CA596;
+
+
+    /* TAMAÑO FUNETES */
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* FAMILIA DE FUENTES */
+    --roboto: "Roboto", sans-serif;
+}
+/*ESTILOS COMUNES*/
+html{
+    font-size: 62.5%;
+    font-family: var(--roboto);
+}
+body{
+    background-color: var(--blanco);
+}
+
+h3{
+    font-size:var(--text-lg);
+    font-weight: bold;
+}
+h4{
+  font-size: var(--text-md);
+}
+
+p{
+    font-size: var(--text-md);
+}
+/*HEADER*/
+header {
+  background-color: #c8ee3d;
+ 
+}
+
+.top-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+header div.logo {
+  display:block;
+  width: 60%;
+  justify-content:flex-start;
+}
+
+header div.logo img {
+  width: 50%;
+}
+
+.form{
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+header button{
+  cursor: pointer;
+}
+
+.form .input{
+  width: 80%;
+}
+
+header nav.nav-header{
+    display: table-column;
+    justify-content: space-between;
+    width: 65%;
+}
+
+header nav.nav-header ul  {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  margin-top: -4%;
+  padding: 0% 4%;
+  width: 100%;
+  gap: 20px;
+  padding: 50px 0 40px 50%;
+}
+
+header nav.nav-header ul li a {
+  
+  text-decoration: none;
+  color: var(--negro);
+  font-size: var(--text-sm);
+  font-weight: bold;
+}
+header nav.nav-header ul li{
+    transition: all 0.5s ease;
+}
+header nav.nav-header ul li:hover{
+  padding: 5px 5px;
+  background-color: #ddf396;
+  border-radius: 15px;
+}
+
+header form input {
+  background-color: var(--blanco);
+  border: 1px solid var(--negro);
+  color: var(--gris-oscuro);
+  padding: 5px;
+  border-radius: 10px;  
+  width: 100%;
+}
+header div.form-header{
+    display: flex;
+    justify-content: center;
+}
+header form button {
+  background-color: var(--blanco);
+  border: 1px solid var(--blanco);
+  width: 18px;
+  padding: 2px;
+  border-radius: 3px;  
+}
+
+.menu-nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2px;
+}
+
+nav.menu-nav li{
+  display: inline-block;
+  margin: 1px;
+  height: 30px;
+}
+
+nav.menu-nav li a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--text-md);
+  transition: all 0.5s ease;
+  color: var(--azul-oscuro);
+  margin: 0px 10px;
+  display: flex;
+}
+
+nav.menu-nav li a:hover{
+  padding: 5px 10px;
+  background-color: #000000;
+  border-radius: 15px;
+  color: #EAF4F4
+}
+nav.menu-nav  :hover{
+  background-color: #ddf396;
+  border-radius: 15px;
+}
+ 
+  
+  header ul li a {
+    
+    text-decoration: none;
+    color: var(--negro);
+  }
+  
+  header form input {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    padding: 2px;
+    border: var(--gris-claro);
+    border-radius: 10px;  
+    width: 60%;
+  }
+  
+  header form button {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width: 18px;
+    padding: 2px;
+    border: var(--gris-claro);
+    border-radius: 3px;  
+  }
+  
+  header div.top-header p {
+    text-align: center;
+  }
+  section.banner img{
+    width: 100%;
+  }
+/* BANNER */
+
+div.banner img{
+    width: 100%;
+    height: 130px;
+}
+
+/* NAVEGACION */
+.menu-nav{
+    background-color: var(--verde-agua-marina);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+nav.menu-nav li{
+    display: inline-block;
+    margin: 1px;
+    height: 30px;
+}
+
+nav.menu-nav li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--text-md);
+    transition: all 0.5s ease;
+    color: var(--azul-oscuro);
+    margin: 0px 10px;
+    display: flex;
+}
+
+nav.menu-nav li a:hover{
+    padding: 5px 10px;
+    background-color: var(--agua-marina-claro);
+    border-radius: 15px;
+}
+
+
+/* MAIN */
+.caja{
+    width:95%;
+    justify-content: center;
+}
+
+.producto{
+    display: flex;
+}
+
+.fotos{
+    display: flex;
+}
+.fotopeque{
+    width: 100%;
+    background-color: var(--gris-oscuro);
+}
+.fotoPrincipal{
+    width: 70%;
+    background-color: var(--azul-oscuro);
+}
+
+
+
+footer{
+  padding: 10px;
+  background-color: #181414;
+  display: flex;
+  flex-wrap: wrap;
+  gap:15%;
+  color:var(--blanco);
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: start;
+  font-size:15px
+}
+footer .pagos{
+  font-size:90px
+}
+footer section h4{
+  font-size: 18px;
+  
+}
+footer p{
+ 
+  margin-top: 10px;
+}
+footer section article div.main-categoria{
+  padding-bottom: 10px;
+  
+}
+footer section article div.main-categoria ul{
+  list-style-type: none;
+}
+footer section article div.main-categoria ul li a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+footer section article div.main-ayuda{
+  padding-bottom: 10px;
+}
+
+footer section article div.main-ayuda ul li a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+footer section article div.main-ayuda ul{
+  list-style-type: none;
+}
+
+
+
+ 
+.flex-row{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  @media (max-width: 361px){
+    .description{
+      display: none;
+    }
+    
+  }
+  @media (min-width: 361px){
+    
+    
+    .products{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+    .products article{
+      max-width: 45%;
+    }
+  
+  
+   
+  
+  }
+  @media (max-width: 769px){
+    main section article{
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+    header nav ul {
+      display: block;
+    }
+    .nav{
+      display: none;
+    }
+    div.top-header {
+      padding: 5%;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .form{
+      width: 50%;
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 769px){
+  
+  
+    header div {
+      display: block;
+    }
+  
+    .burger-menu {
+      display: none;
+    }
+    
+    .products article{
+      max-width: 22%;
+    }
+  
+  }

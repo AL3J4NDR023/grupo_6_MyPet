@@ -22,4 +22,9 @@ const homeRoutes = require('./routes/homeRoutes')
 app.use('/',homeRoutes);
 app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname,'/views/carrito.html')));
 
+/******************** ROUTES productos por ahora********************/
+const productsRoutes=require('./routes/productsRoutes')
+app.use('/products',productsRoutes);
+
 module.exports=app;
+
