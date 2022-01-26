@@ -37,54 +37,115 @@
      </header>
 <main>
     <div class="caja">
-        <section class="producto">
-            <section class="fotos">
-                <section class="vistas">
-                    <div class="fotopeque">
-                        <img src="/images/ringo.png" alt="Producto1">
+        <div class="cajaProducto">
+                <section class="fotos">
+                    <section class="vistas">
+                        <picture class="fotopeque">
+                            <img src="/images/ringo.png" alt="Producto1">
+                        </picture>
+                        <picture class="fotopeque">
+                            <img src="/images/ringo.png" alt="Producto2">
+                        </picture>
+                        <picture class="fotopeque">
+                            <img src="/images/ringo.png" alt="Producto3">
+                        </picture>
+                    </section>
+                    <picture class="fotoPrincipal">
+                        <img src="/images/perroso.jpg" alt="Producto principal">
+                    </picture>
+                </section>
+                <section class="productoDetalles">
+                    <div class="nombre">
+                        <h2>Nombre producto</h2>
                     </div>
-                    <div class="fotopeque">
-                        <img src="/images/ringo.png" alt="Producto2">
+                    <div class="precio">
+                        <h1>$00000</h1>
                     </div>
-                    <div class="fotopeque">
-                        <img src="/images/ringo.png" alt="Producto3">
+                    <div class="parrafo">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, ipsam quibusdam? Porro ducimus aliquam facilis explicabo est natus voluptatem, laudantium sapiente.
+                        </p>
+                    </div>
+                    <div class="carrito">
+                        <div>
+                            <h2>Cantidad</h2>
+                        </div>
                     </div>
                 </section>
-                <section class="fotoPrincipal">
-                    <img src="/images/ringo.png" alt="Producto principal">
-                </section>
-            </section>
-            <section class=productoDetalles>
-                <h2>Nombre_del_producto</h2>
-            </section>
-        </section>
+        </div>    
+    <div class="detalles">    
         <article class="descripcion">
-            <hr size="2px" width="80%" align="left" color="black" />
+            <hr size="2px" width="100%" align="left" color="black" />
             <h2>Descripción del producto</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nisi velit impedit provident veritatis assumenda odio magni, obcaecati eaque tempora facere expedita sequi voluptatem consequatur aliquam nam ea voluptate quos!</p>
-        </article>
-
-        <article class="caracteristicas">
-            <hr size="2px" width="80%" align="left" color="black" />
-            <h2>Características</h2>
-                <ul>
+            </article>
+            
+            <article class="caracteristicas">
+                <hr size="2px" width="100%" align="left" color="black" />
+                <h2>Características</h2>
+                <ul class="items">
                     <li>Característica 1</li>
                     <li>Característica 2</li>
                     <li>Característica 3</li>
                     <li>Característica 4</li>
                 </ul>
-        </article>
-        <article class="opinion">
-            <hr size="2px" width="80%" align="left" color="black" />
-            <h2>Opiniones</h2>
-                <h3>Usuario 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta odit nesciunt eum dolore molestias repellendus quam iusto, nihil iste eos blanditiis. Repudiandae magni optio obcaecati eos eum! Dolores.</p>
-                <h3>Usuario 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam modi omnis accusantium sunt tenetur. Accusamus corporis perspiciatis nesciunt. Aperiam quos asperiores expedita soluta molestiae deserunt recusandae quas placeat sint.</p>
-        </article>
+            </article>
+            <article class="opinion">
+                <hr size="2px" width="100%" align="left" color="black" />
+                <h2>Opiniones</h2>
+                    <h3 class="u1">Usuario 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta odit nesciunt eum dolore  molestias repellendus quam iusto, nihil iste eos blanditiis. Repudiandae magni optio obcaecati eos eum!  Dolores.</p>
+                    <h3>Usuario 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam modi omnis accusantium sunt  tenetur. Accusamus corporis perspiciatis nesciunt. Aperiam quos asperiores expedita soluta molestiae deserunt    recusandae quas placeat sint.</p>
+            </article>
+            <h1 class="recomendados">Recomendados</h1>
         <section class="recomendacion">
-
+            <article>
+                <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$6.770</p>
+                    <p class="discount">40% off</p>
+                </div>
+                    <h4 class="description">Cafetera Moulinex</h4>
+                </div>
+            </article>
+            <article>
+                <img src="images/comidaperros.png" alt="MacBook" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$230.000</p>
+                    <p class="discount">20% off</p>
+                    </div>
+                    <h4 class="description">MacBook Pro 2019</h4>
+                </div>
+            </article>
+            <article>
+                <img src="images/comidaperros.png" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$70.500</p>
+                    <p class="discount">10% off</p>
+                    </div>
+                    <h4 class="description">Samsung Galaxy S10</h4>
+                </div>
+            </article>
+            <article>
+                <img src="images/comidaperros.png" alt="SmartTv Samsung" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$23.200</p>
+                    <p class="discount">5% off</p>
+                    </div>
+                    <h4 class="description">SmartTv Samsung 43"</h4>
+                </div>
+            </article>
         </section>
+    </div>
     </div>
 </main>
 

@@ -11,12 +11,15 @@
 
 /* VARIABLES */
 :root{
-    --verde-agua-marina: #00AA9B;
+    --verde: #9ACD32;
     --negro: #000; 
     --agua-marina-claro: #B1E6E8;
     --gris-oscuro: #666;
     --blanco: #fff;
     --azul-oscuro: #000a23;
+    --verde-claro: #ddf396;
+    --verde-muy-claro: #e4ffd2;
+    --verde-fuerte: #c8ee3d;
     /* TAMAÑO FUNETES */
     --text-sm: 1.2em;
     --text-md: 1.6em;
@@ -46,127 +49,164 @@ p{
     font-size: var(--text-md);
 }
 /*HEADER*/
-header{
-    background-color: var(--verde-agua-marina);
+/* CABECERA */
+
+header {
+  background-color: var(--verde-fuerte);
+ 
 }
+
 .top-header{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
 }
 header div.logo {
-    display:block;
-    width: 15%;
-    justify-content:flex-start;
-  }
+  display:block;
+  width: 60%;
+  justify-content:flex-start;
+}
 
-  .form{
-    width: 50%;
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-  }
+header div.logo img {
+  width: 50%;
+}
 
-  header button{
-    cursor: pointer;
-  }
+.form{
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+header button{
+  cursor: pointer;
+}
+
+.form .input{
+  width: 80%;
+}
+
+header nav.nav-header{
+    display: table-column;
+    justify-content: space-between;
+    width: 65%;
+}
+
+header nav.nav-header ul  {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  margin-top: -4%;
+  padding: 0% 4%;
+  width: 100%;
+  gap: 20px;
+  padding: 50px 0 40px 50%;
+}
+
+header nav.nav-header ul li a {
   
-  .form .input{
-    width: 80%;
-  }
+  text-decoration: none;
+  color: var(--negro);
+  font-size: var(--text-sm);
+  font-weight: bold;
+}
+header nav.nav-header ul li{
+    transition: all 0.5s ease;
+}
+header nav.nav-header ul li:hover{
+  padding: 5px 5px;
+  background-color: var(--verde-claro);
+  border-radius: 15px;
+}
 
-  header nav.nav-header{
-      display: flex;
-      justify-content: space-between;
-      width: 65%;
-  }
-
-  header nav.nav-header ul  {
-    list-style-type: none;
+header form input {
+  background-color: var(--blanco);
+  border: 1px solid var(--negro);
+  color: var(--gris-oscuro);
+  padding: 5px;
+  border-radius: 10px;  
+  width: 100%;
+}
+header div.form-header{
     display: flex;
-    gap: 5px;
-    margin-top: -4%;
-    padding: 0% 4%;
-    width: 100%;
-    gap: 20px;
-    padding: 30px 0 10px 0;
-  }
+    justify-content: center;
+}
+header form button {
+  background-color: var(--blanco);
+  border: 1px solid var(--blanco);
+  width: 18px;
+  padding: 2px;
+  border-radius: 3px;  
+}
+
+.menu-nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 2px;
+}
+
+nav.menu-nav li{
+  display: inline-block;
+  margin: 1px;
+  height: 30px;
+}
+
+nav.menu-nav li a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--text-md);
+  transition: all 0.5s ease;
+  color: var(--azul-oscuro);
+  margin: 0px 10px;
+  display: flex;
+}
+
+nav.menu-nav li a:hover{
+  padding: 5px 10px;
+  background-color: #000000;
+  border-radius: 15px;
+  color: #EAF4F4
+}
+nav.menu-nav  :hover{
+  background-color: var(--verde-claro);
+  border-radius: 15px;
+}
+ 
   
-  header nav.nav-header ul li a {
+  header ul li a {
     
     text-decoration: none;
-    color: var(--azul-oscuro);
-    font-size: var(--text-sm);
-    font-weight: bold;
+    color: var(--negro);
   }
-  header nav.nav-header ul li{
-      transition: all 0.5s ease;
-  }
-  header nav.nav-header ul li:hover{
-    padding: 5px 5px;
-    background-color: var(--agua-marina-claro);
-    border-radius: 15px;
-  }
+  
   header form input {
     background-color: var(--blanco);
     border: 1px solid var(--negro);
     color: var(--gris-oscuro);
-    padding: 5px;
+    padding: 2px;
+    border: var(--gris-claro);
     border-radius: 10px;  
-    width: 100%;
+    width: 60%;
   }
-  header div.form-header{
-      display: flex;
-      justify-content: center;
-  }
+  
   header form button {
     background-color: var(--blanco);
     border: 1px solid var(--negro);
     width: 18px;
     padding: 2px;
+    border: var(--gris-claro);
     border-radius: 3px;  
   }
-
-/* BANNER */
-
-div.banner img{
+  
+  header div.top-header p {
+    text-align: center;
+  }
+  section.banner img{
     width: 100%;
-    height: 130px;
-}
-
-/* NAVEGACION */
-.menu-nav{
-    background-color: var(--verde-agua-marina);
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    padding: 2px;
-}
-
-nav.menu-nav li{
-    display: inline-block;
-    margin: 1px;
-    height: 30px;
-}
-
-nav.menu-nav li a{
-    text-decoration: none;
-    font-weight: bold;
-    font-size: var(--text-md);
-    transition: all 0.5s ease;
-    color: var(--azul-oscuro);
-    margin: 0px 10px;
-    display: flex;
-}
-
-nav.menu-nav li a:hover{
-    padding: 5px 10px;
-    background-color: var(--agua-marina-claro);
-    border-radius: 15px;
-}
-
+  }
 /* MAIN */
 main{
   width: 94%;
@@ -175,12 +215,12 @@ main{
 }
 
 main section{
-  background-color: var(--agua-marina-claro);
+  background-color: var(--verde-muy-claro);
   margin: 10px 0;
 }
 
 main section h3{
-  background-color: var(--verde-agua-marina);
+  background-color: var(--verde);
   text-align: center;
 }
 main div h4{
@@ -222,7 +262,7 @@ main section article div.contenedor-img img{
   width: 25%;
 }
 .btn-return{
-  background-color: var(--verde-agua-marina);
+  background-color: var(--verde);
   display: inline-flex;
   font-weight: 800;
   transition: all 0.5s ease;
@@ -249,30 +289,40 @@ main section.mas-vendidos article div img{
 }
 
 /* FOOTER */
+/*FOOTER*/
+
 footer{
   padding: 10px;
-  text-align: center;
-  background-color: var(--verde-agua-marina);
+  background-color: #181414;
+  display: flex;
+  flex-wrap: wrap;
+  gap:15%;
+  color:var(--blanco);
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: start;
+  font-size:15px
 }
-
+footer .pagos{
+  font-size:90px
+}
 footer section h4{
-  text-align: center;
   font-size: 18px;
+  
 }
 footer p{
-  text-align: center;
+ 
   margin-top: 10px;
 }
 footer section article div.main-categoria{
   padding-bottom: 10px;
+  
 }
 footer section article div.main-categoria ul{
   list-style-type: none;
 }
 footer section article div.main-categoria ul li a{
   text-decoration: none;
-  font-size: var(--text-md);
-  color: var(--negro);
+  color: var(--blanco);
 }
 footer section article div.main-ayuda{
   padding-bottom: 10px;
@@ -280,12 +330,13 @@ footer section article div.main-ayuda{
 
 footer section article div.main-ayuda ul li a{
   text-decoration: none;
-  font-size: var(--text-md);
-  color: var(--negro);
+  color: var(--blanco);
 }
 footer section article div.main-ayuda ul{
   list-style-type: none;
 }
+
+
 /* RESPONSIVE */
 @media screen and (min-width: 769px){
   main div.vista-main{
@@ -293,9 +344,5 @@ footer section article div.main-ayuda ul{
     justify-content:space-between;
     flex-wrap: nowrap;
     gap: 13px;
-  }
-  footer{
-    display: 	flex;
-    justify-content: space-around;
   }
 }

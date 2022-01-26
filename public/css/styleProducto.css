@@ -24,7 +24,7 @@
 
 
     /* TAMAÑO FUNETES */
-    --text-sm: 1.2em;
+    --text-sm: 1em;
     --text-md: 1.6em;
     --text-lg: 1.8em;
     --title-md: 2.4em;
@@ -40,10 +40,7 @@ body{
     background-color: var(--blanco);
 }
 
-h3{
-    font-size:var(--text-lg);
-    font-weight: bold;
-}
+
 h4{
   font-size: var(--text-md);
 }
@@ -208,12 +205,6 @@ nav.menu-nav  :hover{
   section.banner img{
     width: 100%;
   }
-/* BANNER */
-
-div.banner img{
-    width: 100%;
-    height: 130px;
-}
 
 /* NAVEGACION */
 .menu-nav{
@@ -248,28 +239,196 @@ nav.menu-nav li a:hover{
 
 
 /* MAIN */
-.caja{
-    width:95%;
-    justify-content: center;
+main{
+  width: 90%;
+  margin: 0 auto;
+/*   overflow: hidden;*/
 }
-
-.producto{
-    display: flex;
+.caja{
+  width:95%;
+  display:flex; 
+  flex-wrap: wrap; 
+}
+.cajaProducto{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .fotos{
     display: flex;
+    width: 50%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
-.fotopeque{
-    width: 100%;
-    background-color: var(--gris-oscuro);
+.fotoPrincipal img{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--azul-oscuro);
+    flex-grow: 1;
+    object-fit: contain;
+    box-sizing: border-box;
+
 }
 .fotoPrincipal{
-    width: 70%;
-    background-color: var(--azul-oscuro);
+    width:75%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+section.vistas{
+    width: 25%;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+}
+.fotopeque img{
+  padding: 10px;
+  max-width: 100%;
+}
+
+.productoDetalles{
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.productoDetalles div.nombre{
+    text-align: center;
+    font-size: var(--text-lg);
+    padding: 15px;
+}
+.productoDetalles div.precio{
+  text-align: center;
+  padding: 10px 0 20px 0;
+  font-size: var(--text-md);
+}
+
+.productoDetalles div.parrafo{
+  text-align: justify;
+  font-size: var(--text-sm);
+  padding: 0 0 20px 0;
+}
+.productoDetalles div.carrito{
+  text-align: center;
+  border: solid 3px black;
+  box-sizing: content-box;
+}
+.detalles h2{
+  padding-top: 4px;
+  padding-bottom: 7px;
+  text-align: left;
+  border: solid 0.5px black;
+  background-color: #c8ee3d;
+  border-radius: 0 0 8px 0;
+  width: 40%;
+  height:25px;
+}
+.descripcion p{
+padding: 8px  0 10px 0;
+font-size: var(--text-md);
+}
+.descripcion h2{
+  font-size: var(--text-lg);
+  }
+.items {
+  font-size: var(--text-md);
+  list-style-type: none;
+  padding: 5px 0 5px 0;
+}
+.items li {
+  padding: 5px 0 5px 0;
+}
+.opinion .u1{
+  padding-top:10px;
+}
+.opinion h2{
+  font-size: var(--text-lg);
+}
+.opinion p{
+  padding: 6px  0 8px 0;
+  font-size: var(--text-md);
+}
+.opinion h3{
+  font-size: var(--text-md);
+}
+.caracteristicas h2  {
+  font-size: var(--text-lg);
+}
+.recomendacion{
+  display: flex;
+  flex-wrap: wrap;
+}
+ .recomendados{
+  font-size: var(--text-lg);
+  padding-bottom: 20px;
+  text-align: center;
+  display: inline;
+  margin-inline-end: 14px;
+}
+
+main section article{
+  background-color: var(--blanco);
+  margin:10px 0; 
+}
+
+main section article img{
+  width: 100%;
 }
 
 
+.price{
+  font-size: var(--text-lg);
+  flex-grow: 0.30;
+}
+.discount{
+  flex-grow: 0.70;
+}
+
+.discount, .description{
+  font-size:var(--text-md)
+}
+
+.description{
+  display: none;
+}
+
+main section article div i, .discount{
+  color: var(--verde);
+}
+main section article div i{
+  font-size: var(--text-md);
+  border: 1px solid var(--verde);
+  border-radius:50%;
+  padding:5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #FFF;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+main section h3{
+  margin: 20px 0 0 0;
+}
+
+article div.main-article{
+  width: 100%;
+  padding:15px;
+  border-top: 1px solid var(--gris-claro);
+  position: relative;
+}
+
+
+
+/*FOOTER*/
 
 footer{
   padding: 10px;
