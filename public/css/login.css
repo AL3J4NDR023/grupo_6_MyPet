@@ -222,7 +222,9 @@ nav.menu-nav  :hover{
 
 
 /* MAIN */
-
+.photo{
+  width: 1%;
+}
 
 main {
   height: 0%;
@@ -266,14 +268,15 @@ div .btn input:hover{
 
 /*FOOTER*/
 
+/* FOOTER */
 footer{
-  padding: 10px;
+  padding: 6%;
   background-color: #181414;
   display: flex;
   flex-wrap: wrap;
   gap:15%;
   color:var(--blanco);
-  font-family: 'Roboto Condensed', sans-serif;
+  
   text-align: start;
   font-size:15px
 }
@@ -306,14 +309,12 @@ footer section article div.main-ayuda{
 footer section article div.main-ayuda ul li a{
   text-decoration: none;
   color: var(--blanco);
+  
 }
 footer section article div.main-ayuda ul{
   list-style-type: none;
 }
 
-
-
- 
 .flex-row{
     display: flex;
     align-items: baseline;
@@ -326,9 +327,10 @@ footer section article div.main-ayuda ul{
   main img {
     display: block;
     float: left;
-    width: 50%;
-    height: 486px;
+    width: 43%;
+    height: 1%;
     margin: auto;
+    padding: 1%;
   
   }
 }

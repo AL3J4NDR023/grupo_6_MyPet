@@ -334,9 +334,9 @@ footer section article div.main-ayuda ul{
 
   main img {
     display: block;
-    float: right;
-    border-radius: 0px;
-    width: 60%;
-    margin: auto;
+    float: left;
+    width: 43%;
+    height: 1%;
+    padding: 2%;
   }
 }

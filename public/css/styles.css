@@ -21,6 +21,8 @@
   --negro: #000000;
   --blanco: #ffffff;
   --azul-claro: #2CA596;
+  --verde-claro: #ddf396;
+  --verde-fuerte: #c8ee3d;
   --text-sm: 1.2em;
   --text-md: 1.6em;
   --text-lg: 1.8em;
@@ -48,7 +50,7 @@ p {
 /* CABECERA */
 
 header {
-  background-color: #c8ee3d;
+  background-color: var(--verde-fuerte);
  
 }
 
@@ -113,7 +115,7 @@ header nav.nav-header ul li{
 }
 header nav.nav-header ul li:hover{
   padding: 5px 5px;
-  background-color: #ddf396;
+  background-color: var(--verde-claro);
   border-radius: 15px;
 }
 
@@ -167,7 +169,7 @@ nav.menu-nav li a:hover{
   color: #EAF4F4
 }
 nav.menu-nav  :hover{
-  background-color: #ddf396;
+  background-color: var(--verde-claro);
   border-radius: 15px;
 }
  
@@ -293,7 +295,7 @@ article div.main-article{
 } 
 
 .notices :hover{
- font-size: 12px;
+  box-shadow: 0px 0px 10px rgb(100,100,100);
  
 } 
 .n1{
@@ -320,7 +322,7 @@ article div.main-article{
 /*footer*/
 /* FOOTER */
 footer{
-  padding: 10px;
+  padding: 6%;
   background-color: #181414;
   display: flex;
   flex-wrap: wrap;
