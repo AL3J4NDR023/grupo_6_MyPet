@@ -18,10 +18,12 @@ app.listen(3001,()=>{  //correr servidor
 app.set('view engine', 'ejs')// template engine - EJS
 app.set('views', 'src/views')// template engine - EJS
 
+
+
 /******************** ROUTES ********************/
 const homeRoutes = require('./routes/homeRoutes')
 app.use('/',homeRoutes);
-app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname,'/views/carrito.html')));
+
 
 /******************** ROUTES productos por ahora********************/
 const productsRoutes=require('./routes/productsRoutes')
@@ -29,3 +31,7 @@ app.use('/products',productsRoutes);
 
 module.exports=app;
 
+/***************** ERROR 404 - DEJAR AL FINAL DE LAS ROUTES ***************/
+app.use((req, res, next) => {
+    res.status(404).render('error404')
+})

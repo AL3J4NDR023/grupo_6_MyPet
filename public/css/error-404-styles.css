@@ -1,0 +1,137 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+/* NORMALIZACIÓN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  /* colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --azul-claro: #2CA596;
+  --verde-claro: #ddf396;
+  --verde-fuerte: #c8ee3d;
+  --text-sm: 1.2em;
+  --text-md: 1.6em;
+  --text-lg: 1.8em;
+  --title-md: 2.4em;
+  /* familias de fuentes */
+  --roboto: "Roboto", sans-serif;
+}
+body{
+  background-color: var(--blanco)
+}
+/* ESTILOS COMUNES */
+
+html {
+  font-size: 62.5%;
+  font-family: var(--roboto);
+}
+
+h3 {
+  font-size: var(--title-md);
+}
+
+p {
+  font-size: var(--text-sm);
+}
+
+header {
+    background-color: var(--verde-fuerte);
+   
+  }
+  
+  .top-header{
+   
+    width: 100%;
+    padding: 0px 0px 0% 30%;
+  }
+  header div.logo {
+    display:block;
+    width: 100%;
+
+  }
+  
+  header div.logo img {
+    width: 50%;
+  }
+
+  body{
+      background:var(--gris-claro)
+  }
+  .container{
+    
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      position: relative;
+  }
+  .message {
+   
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    text-align: center;
+    font-size: var(--text-lg);
+    border-radius: 10px;
+}
+  /* FOOTER */
+footer{
+    padding: 6%;
+    background-color: #181414;
+    display: flex;
+    flex-wrap: wrap;
+    gap:15%;
+    color:var(--blanco);
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: start;
+    font-size:15px
+  }
+  footer .pagos{
+    font-size:90px
+  }
+  footer section h4{
+    font-size: 18px;
+    
+  }
+  footer p{
+   
+    margin-top: 10px;
+  }
+  footer section article div.main-categoria{
+    padding-bottom: 10px;
+    
+  }
+  footer section article div.main-categoria ul{
+    list-style-type: none;
+  }
+  footer section article div.main-categoria ul li a{
+    text-decoration: none;
+    color: var(--blanco);
+  }
+  footer section article div.main-ayuda{
+    padding-bottom: 10px;
+  }
+  
+  footer section article div.main-ayuda ul li a{
+    text-decoration: none;
+    color: var(--blanco);
+  }
+  footer section article div.main-ayuda ul{
+    list-style-type: none;
+  }
+
+  
