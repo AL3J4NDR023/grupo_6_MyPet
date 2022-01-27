@@ -69,7 +69,7 @@ header {
   }
 
   body{
-      background:var(--gris-claro)
+      background:var(--negro)
   }
   .container{
     
@@ -86,7 +86,16 @@ header {
     position: absolute;
     text-align: center;
     font-size: var(--text-lg);
+    color: var(--blanco);
     border-radius: 10px;
+}
+img{
+    width: 70%;
+    border-radius: 10px;
+}
+.message a{
+    
+    color: var(--verde-fuerte)
 }
   /* FOOTER */
 footer{
