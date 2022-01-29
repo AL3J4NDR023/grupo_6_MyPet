@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <title>Mypet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="../css/newproduct.css">
+</head>
+<body>
+	<%- include('../partials/header_list_products')%>
+	<main>
+		<img  src="#" alt="">
+	   <form action="/register" method="post"  class="form-register">
+		<h2>Nuevo Producto</h2>
+		<div class="input-contenedor">
+			<input type="text" name="name" placeholder="Nombre">
+			<input type="text" name="category" placeholder="Categoria">
+			<input type="text"name="color" placeholder="Color">
+			<input type="text"name="precio" placeholder="precio">
+			<input type="text"name="cantidad" placeholder="Cantidad">
+			<input type="text"name="photos" placeholder="Fotos">
+			
+			
+		 <input type="submit" value="Crear Producto">
+
+		</div>
+		</form>
+	</main>
+	
+</body>
+</html>

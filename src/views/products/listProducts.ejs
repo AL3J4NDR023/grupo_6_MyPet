@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mypet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="../css/list_products.css">
+    </head>
+<body>
+    <%- include('../partials/header_list_products')%>
+    <section id="container">
+		
+		<h1>Lista de productos</h1>
+		<a href="/products/new-product" class="btn_new">Crear Producto  <i class="fas fa-plus-circle"></i></a>
+		
+		<form action="#" method="get" class="form_search">
+			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+			<input type="submit" value="Buscar" class="btn_search">
+		</form>
+        <div class="table">
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Categorias</th>
+				<th>Colores</th>
+				<th>Precio</th>
+				<th>Cantidad</th>
+				<th>FOTOS</th>
+				<th>Acciones</th>
+			</tr>
+		
+				<tr>
+					<td>0001</td>
+					<td>Jabon de baño</td>
+					<td>Perro</td>
+					<td>ninguno</td>
+					<td>5.500</td>
+					<td>10</td>
+					<td><img src='#'></td>
+					<td>
+						<a class="link_edit" href="#"><i class="fas fa-edit"></i></a>
+
+					
+						<a class="link_delete" href="#"><i class="fas fa-trash-alt"></i></a>
+					
+						
+					</td>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>Jabon de baño</td>
+					<td>Perro</td>
+					<td>ninguno</td>
+					<td>5.500</td>
+					<td>10</td>
+					<td><img src='#'></td>
+					<td>
+						<a class="link_edit" href="#"><i class="fas fa-edit"></i></a>
+
+					
+						<a class="link_delete" href="#"><i class="fas fa-trash-alt"></i></a>
+					
+						
+					</td>
+				</tr>
+        </table>
+        </div>
+    </section>
+			<%- include('../partials/footer')%>
+</body>
+</html>
