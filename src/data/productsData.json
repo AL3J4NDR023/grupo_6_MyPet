@@ -1,0 +1,56 @@
+[
+    {
+     "id": 1,
+     "name": "Comida para perros Dogourmet",
+     "price": "60700",
+     "discount": "5",
+     "category": "visited",
+     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+     "image": "comidaperros.png"
+    },
+    {
+        "id": 2,
+        "name": "Comida para perros Dogourmet",
+        "price": "60700",
+        "discount": "5",
+        "category": "visited",
+        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "image": "comidaperros.png"
+       },
+       {
+        "id": 3,
+        "name": "Comida para perros Dogourmet",
+        "price": "60700",
+        "discount": "5",
+        "category": "visited",
+        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "image": "comidaperros.png"
+       },
+       {
+        "id": 4,
+        "name": "Shampoo para perro",
+        "price": "35000",
+        "discount": "2",
+        "category": "in-sale",
+        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "image": "shampoo.png"
+       },
+       {
+        "id": 5,
+        "name": "Shampoo para perro",
+        "price": "35000",
+        "discount": "2",
+        "category": "in-sale",
+        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "image": "shampoo.png"
+       },
+       {
+        "id": 6,
+        "name": "Shampoo para perro",
+        "price": "35000",
+        "discount": "2",
+        "category": "in-sale",
+        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+        "image": "shampoo.png"
+       }
+]

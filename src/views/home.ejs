@@ -10,158 +10,59 @@
             <section class="last-visit">
                 <h3>Basado en tu última visita</h3>
                 <div class="products" >
+                    <% visited.forEach(product =>{
+                        let finalPrice = (product.price*((100-product.discount)/100)).toFixed(0)%>
                     <article>
                         <a href="/products">
-                        <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                        <img src="images/<%= product.image%>" alt="Cafetera" class="product_img">
                         <div class="main-article">
                             <i class="fas fa-truck"></i>
                             <div class="flex-row">
-                            <p class="price">$6.770</p>
-                            <p class="discount">40% off</p>
+                            <p class="price">$<%= product.price%></p>
+                            <p class="discount"><%= product.discount%>0% off</p>
                         </div>
-                            <h4 class="description">Cafetera Moulinex</h4>
+                            <h4 class="description"><%= product.name%></h4>
                         </div>
                     </a>
                     </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/comidaperros.png" alt="MacBook" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$230.000</p>
-                            <p class="discount">20% off</p>
-                            </div>
-                            <h4 class="description">MacBook Pro 2019</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/comidaperros.png" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$70.500</p>
-                            <p class="discount">10% off</p>
-                            </div>
-                            <h4 class="description">Samsung Galaxy S10</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/comidaperros.png" alt="SmartTv Samsung" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$23.200</p>
-                            <p class="discount">5% off</p>
-                            </div>
-                            <h4 class="description">SmartTv Samsung 43"</h4>
-                        </div>
-                        </a>
-                    </article>
+                    <% });%>
                 </div>
             </section>
             <section class="offers">
                 <h3>Ofertas</h3>
                 <div class="products">
+                    <% inSale.forEach(product =>{
+                        let finalPrice = (product.price*((100-product.discount)/100)).toFixed(0)%>
                     <article>
                         <a href="/products">
-                        <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                        <img src="images/<%= product.image%>" alt="Cafetera" class="product_img">
                         <div class="main-article">
                             <i class="fas fa-truck"></i>
                             <div class="flex-row">
-                            <p class="price">$20.770</p>
-                            <p class="discount">40% off</p>
+                            <p class="price">$<%= finalPrice%></p>
+                            <p class="discount"><%= product.discount%>% off</p>
                             </div>
                             <div clas="des">
-                            <h4 class="description">Dogourmet Adulto</h4>
+                            <h4 class="description"><%= product.name%></h4>
                         </div>
 
                         </div>
                         </a>
                     </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/tapetes.png" alt="MacBook" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$35.000</p>
-                            <p class="discount">20% off</p>
-                            </div>
-                            <h4 class="description">Tapetes Absorbentes</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/shampoo.png" alt="shampoo" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$12.000</p>
-                            <p class="discount">10% off</p>
-                            </div>
-                        <h4 class="description">Shampoo Petys</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="/products">
-                        <img src="images/ringo.png" alt="comidaringo" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <div class="flex-row">
-                            <p class="price">$35.200</p>
-                            <p class="discount">5% off</p>
-                            </div>
-                            <h4 class="description">Comida Ringo - Adulto</h4>
-                        </div>
-                        </a>
-                    </article>
+                    <% });%>
                 </div>  
             </section>
             <h2>Noticias</h2>
             <section class="">
                 <div class="notices">
+                    <% notices.forEach(notice=>{%>
                     <div class="n1">
-                        <img src="/images/61e741216eda1.jpeg">
-                        <h4 class="note">El origen de la palabra 'firulais' para nombrar y llamar a los perros</h4>
+                        <img src="/images/<%=notice.image%>">
+                        <h4 class="note"><%= notice.name%></h4>
                     </div>
-                    <div class="n1">
-                        <img src="/images/5fe77e4a5a380.jpeg">
-                        <h4 class="note">El origen de la palabra 'firulais' para nombrar y llamar a los perros</h4>
-
-                    </div>
-                    <div class="n1">
-                        <img src="/images/61534df7438d5.jpeg">
-                        <h4 class="note">Muere mamá que salvó a su hijo de 4 años del ataque de un pitbull</h4>
-                    </div>
-                    <div class="n1">
-                        <img src="/images/61534df7438d5.jpeg">
-                        <h4 class="note">Muere mamá que salvó a su hijo de 4 años del ataque de un pitbull</h4>
-                    </div>
-
-                    <div class="n1">
-                        <img src="/images/firu.jpeg">
-                        <h4 class="note">Investigan a mujer por muerte de perrita en baño de veterinaria</h4>
-                    </div>
-                    <div class="n1">
-                        <img src="/images/619456be69236.jpeg">
-                        <h4 class="note">Perros y gatos: los costos para mantener a cada mascota</h4>
-                    </div>
-                    <div class="n1">
-                        <img src="/images/61e723be09724.jpeg" >
-                        <h4 class="note">La importancia del aire fresco para las mascotas</h4>
-                    </div>
-                    <div class="n1">
-                        <img src="/images/61e723be09724.jpeg" >
-                        <h4 class="note">La importancia del aire fresco para las mascotas</h4>
-                    </div>
+                    <% });%>
                 </div>
+                
             </section>
         </main>
         <%- include('./partials/footer')%>
