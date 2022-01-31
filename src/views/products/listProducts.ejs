@@ -31,41 +31,27 @@
 				<th>FOTOS</th>
 				<th>Acciones</th>
 			</tr>
-		
+			<% products.forEach(product =>{%>
 				<tr>
-					<td>0001</td>
-					<td>Jabon de baño</td>
-					<td>Perro</td>
+					
+					<td><%= product.id%></td>
+					<td><%= product.name%></td>
+					<td><%= product.category%></td>
 					<td>ninguno</td>
-					<td>5.500</td>
-					<td>10</td>
+					<td><%= product.price%></td>
+					<td><%= product.amount%></td>
 					<td><img src='#'></td>
 					<td>
-						<a class="link_edit" href="#"><i class="fas fa-edit"></i></a>
+						<a class="link_edit" href="/products/edit/<%=product.id%>"><i class="fas fa-edit"></i></a>
 
 					
 						<a class="link_delete" href="#"><i class="fas fa-trash-alt"></i></a>
 					
 						
 					</td>
+					<%})%>
 				</tr>
-				<tr>
-					<td>0001</td>
-					<td>Jabon de baño</td>
-					<td>Perro</td>
-					<td>ninguno</td>
-					<td>5.500</td>
-					<td>10</td>
-					<td><img src='#'></td>
-					<td>
-						<a class="link_edit" href="#"><i class="fas fa-edit"></i></a>
-
-					
-						<a class="link_delete" href="#"><i class="fas fa-trash-alt"></i></a>
-					
-						
-					</td>
-				</tr>
+				
         </table>
         </div>
     </section>
