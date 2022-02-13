@@ -44,10 +44,9 @@
 					<td>
 						<a class="link_edit" href="/products/edit/<%=product.id%>"><i class="fas fa-edit"></i></a>
 
-					
-						<a class="link_delete" href="#"><i class="fas fa-trash-alt"></i></a>
-					
-						
+						<form action="/products/delete/<%=product.id%>?_method=delete" method="POST">
+							<button type="submit"class="delete"><i class="fas fa-trash-alt"></i></button>
+						</form>
 					</td>
 					<%})%>
 				</tr>

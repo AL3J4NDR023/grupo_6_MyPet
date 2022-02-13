@@ -38,7 +38,7 @@ const controller={
         res.redirect('/products/list-products')
 
     },
-
+    /**EDIT PRODUCT */
     edit:(req,res)=>{
       let id= req.params.id;
       let productToEdit = products.find(p => p.id ==id);
@@ -62,6 +62,14 @@ const controller={
       });
       fs.writeFileSync(productsFilePath, JSON.stringify(newproducts,null,' '));
 		    res.redirect('/products/list-products');
+    },
+    delete: (req,res)=>{
+      let id= req.params.id;
+      console.log(id);
+      let finalProduct= products.filter(p => p.id !=id);
+      fs.writeFileSync(productsFilePath, JSON.stringify(finalProduct,null,' '))
+      res.redirect('/products/list-products');
     }
+
   }
 module.exports = controller; 

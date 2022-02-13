@@ -16,4 +16,7 @@ router.post('/create', controller.create);
 /** edit product */
 router.get('/edit/:id',controller.edit); 
 router.patch('/edit/:id', controller.update); 
+
+/** delete product */
+router.delete('/delete/:id',controller.delete)
 module.exports = router
