@@ -12,8 +12,7 @@ const visited= products.filter((producto)=> producto.category ==='visited')
 const inSale=products.filter((producto)=> producto.category ==='in-sale')
 const controller ={
     home: (req, res) => {
-		
-      res.render('home',{visited,inSale,toThousand,notices})
+      return res.render('home',{visited,inSale,toThousand,notices})
     }, 
     login: (req,res)=>{
       return res.render(path.join(__dirname,'../views/login'));
