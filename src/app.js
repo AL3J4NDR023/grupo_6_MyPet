@@ -1,6 +1,14 @@
 /*********** REQUIRE EXPRESS ********************** */
 const express = require('express'); //requerir express
+const session = require('express-session');
 const app = express(); // asignar la funcion
+
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
 
 /******** PATCH ********************** */
 const path = require('path'); // funcion

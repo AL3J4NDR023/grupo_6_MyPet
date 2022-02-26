@@ -16,9 +16,20 @@
             <div class="Photo">
             <img src="/images/perroso.jpg" alt="">
         </div>
-           <form action="/login" method="post">
+
+        <% if (typeof errprd != 'undefined') { %>
+            <ul>
+              <% for (let i=0; i < errors.length; i++) { %>
+                <li style="color: red;">
+                  <%= errors[i].msg %>
+                </li>
+              <% } %>
+            </ul>
+          <% } %>
+
+        <form action="/login" method="post">
             <h2>Acceder a la cuenta</h2>
-                <div>
+            <div>
                 <input type="text"name="user" placeholder="Nombre de usuario" required>
                 <input type="password" name="pass" placeholder="Contraseña"required>
                 <div class="btn">
@@ -26,7 +37,7 @@
                 </div>
                 <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
             </div>
-            </form>
+        </form>
         </main>
         <%- include('./partials/footer')%>
 </body>
