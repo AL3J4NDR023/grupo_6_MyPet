@@ -18,7 +18,16 @@ app.listen(3001,()=>{  //correr servidor
 app.set('view engine', 'ejs')// template engine - EJS
 app.set('views', 'src/views')// template engine - EJS
 
+//captura informacion metodo post
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
+/** metodo para PUT AND DELETE 
+ *  npm install method-override --save // TOCA INSTALAR
+*/
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 /******************** ROUTES ********************/
 const homeRoutes = require('./routes/homeRoutes')
@@ -32,6 +41,4 @@ app.use('/products',productsRoutes);
 module.exports=app;
 
 /***************** ERROR 404 - DEJAR AL FINAL DE LAS ROUTES ***************/
-app.use((req, res, next) => {
-    res.status(404).render('error404')
-})
+//app.use((req, res, next) => {res.status(404).render('error404')})

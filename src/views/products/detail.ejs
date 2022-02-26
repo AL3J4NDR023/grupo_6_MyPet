@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= product.name%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet"  href="/css/detail.css">
+</head>
+<body>
+    <%- include('../partials/header')%>
+<main>
+    <div class="caja">
+        <div class="cajaProducto">
+            
+                <section class="fotos">
+                    <section class="vistas">
+                        <picture class="fotopeque">
+                            <img src="/images/<%=product.image%>" alt="Producto1">
+                        </picture>
+                        <picture class="fotopeque">
+                            <img src="/images/<%=product.image%>" alt="Producto2">
+                        </picture>
+                        <picture class="fotopeque">
+                            <img src="/images/<%=product.image%>" alt="Producto3">
+                        </picture>
+                    </section>
+                    <picture class="fotoPrincipal">
+                        <img src="/images/<%=product.image%>" alt="Producto principal">
+                    </picture>
+                </section>
+                <section class="productoDetalles">
+                    <div class="nombre">
+                        <h2><%= product.name%></h2>
+                    </div>
+                    <div class="precio">
+                        <h1>$<%=toThousand(product.price)%></h1>
+                    </div>
+                    <div class="parrafo">
+                        <p>
+                            <%=product.description%>
+                        </p>
+                    </div>
+                    <div class="carrito">
+                        <div>
+                            <h2>Cantidad: <%=product.amount%></h2>
+                        </div>
+                    </div>
+                </section>
+        </div>    
+    <div class="detalles">    
+        <article class="descripcion">
+            <hr size="2px" width="100%" align="left" color="black" />
+            <h2>Descripción del producto</h2>
+                <p><%=product.description%></p>
+            </article>
+            
+            <article class="caracteristicas">
+                <hr size="2px" width="100%" align="left" color="black" />
+                <h2>Características</h2>
+                <ul class="items">
+                    <li><%=product.caracteristicas%></li>
+                    
+                </ul>
+            </article>
+            <article class="opinion">
+                <hr size="2px" width="100%" align="left" color="black" />
+                <h2>Opiniones</h2>
+                    <h3 class="u1">Usuario 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta odit nesciunt eum dolore  molestias repellendus quam iusto, nihil iste eos blanditiis. Repudiandae magni optio obcaecati eos eum!  Dolores.</p>
+                    <h3>Usuario 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam modi omnis accusantium sunt  tenetur. Accusamus corporis perspiciatis nesciunt. Aperiam quos asperiores expedita soluta molestiae deserunt    recusandae quas placeat sint.</p>
+            </article>
+           
+            <h1 class="recomendados">Recomendados</h1>
+        <section class="recomendacion">
+            <article>
+                <img src="images/comidaperros.png" alt="Cafetera" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$6.770</p>
+                    <p class="discount">40% off</p>
+                </div>
+                    <h4 class="description">Cafetera Moulinex</h4>
+                </div>
+            </article>
+            <article>
+                <img src="images/comidaperros.png" alt="MacBook" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$230.000</p>
+                    <p class="discount">20% off</p>
+                    </div>
+                    <h4 class="description">MacBook Pro 2019</h4>
+                </div>
+            </article>
+            <article>
+                <img src="../images/comidaperros.png" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$70.500</p>
+                    <p class="discount">10% off</p>
+                    </div>
+                    <h4 class="description">Samsung Galaxy S10</h4>
+                </div>
+            </article>
+            <article>
+                <img src="" alt="SmartTv Samsung" class="product_img">
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <div class="flex-row">
+                    <p class="price">$23.200</p>
+                    <p class="discount">5% off</p>
+                    </div>
+                    <h4 class="description">SmartTv Samsung 43"</h4>
+                </div>
+            </article>
+        </section>
+    </div>
+    </div>
+</main>
+
+<%- include('../partials/footer')%>
+</body>
+</html>

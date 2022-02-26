@@ -261,7 +261,7 @@ table td{
 .link_edit:hover{
 	color: var(--negro);
 }
-.link_delete{
+.delete{
 	color: var(--rojo);
 }
 .link_delete:hover{

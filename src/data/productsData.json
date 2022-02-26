@@ -1,56 +1,73 @@
 [
-    {
-     "id": 1,
-     "name": "Comida para perros Dogourmet",
-     "price": "60700",
-     "discount": "5",
-     "category": "visited",
-     "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-     "image": "comidaperros.png"
-    },
-    {
-        "id": 2,
-        "name": "Comida para perros Dogourmet",
-        "price": "60700",
-        "discount": "5",
-        "category": "visited",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": "comidaperros.png"
-       },
-       {
-        "id": 3,
-        "name": "Comida para perros Dogourmet",
-        "price": "60700",
-        "discount": "5",
-        "category": "visited",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": "comidaperros.png"
-       },
-       {
-        "id": 4,
-        "name": "Shampoo para perro",
-        "price": "35000",
-        "discount": "2",
-        "category": "in-sale",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": "shampoo.png"
-       },
-       {
-        "id": 5,
-        "name": "Shampoo para perro",
-        "price": "35000",
-        "discount": "2",
-        "category": "in-sale",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": "shampoo.png"
-       },
-       {
-        "id": 6,
-        "name": "Shampoo para perro",
-        "price": "35000",
-        "discount": "2",
-        "category": "in-sale",
-        "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "image": "shampoo.png"
-       }
+ {
+  "id": 1,
+  "name": "Comida para perros Dogourmet",
+  "price": "60700",
+  "discount": "5",
+  "amount": "20",
+  "category": "visited",
+  "description": "Mezcla de proteínas provenientes de la carne y la leche que tu cachorro necesita para un desarrollo integral de la masa muscular y órganos vitales. Contiene Omega 3 y 6 para prevenir enfermedades cardiovasculares y fomentar un pelo hermoso.",
+  "image": "comidaperros.png"
+ },
+ {
+  "id": 2,
+  "name": "Dog Chow Perros Adultos    ",
+  "price": "157342",
+  "discount": "5",
+  "amount": "20",
+  "category": "visited",
+  "description": "El concentrado para perros adultos de razas medianas y grandes Purina Dog Chow es un concentrado formulado para proporcionar nutrientes e ingredientes de calidad a la dieta de tu perro con el fin de ayudar a mantenerlo saludable y con más vitalidad para disfrutar de su día a día con más energía por muchos años. Es un concentrado enriquecido con multivitaminas, prebióticos, fibras naturales, que no solo favorecerán su digestión sino su salud en general, pues una digestión sana es la base para tener una vida sana.",
+  "caracteristicas": "Equilibra la flora intestinal.Ayuda a mantener sus dientes limpios.Ayudar a mantener su corazón sano.Músculos y huesitos fuertes.Promueve un pelaje brillante.Ayuda a mantenerlo sano y en forma",
+  "image": "comidaperros.png"
+ },
+ {
+  "id": 3,
+  "name": "Comida para perros Dogourmet",
+  "price": "60700",
+  "discount": "5",
+  "amount": "20",
+  "category": "visited",
+  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+  "image": "comidaperros.png"
+ },
+ {
+  "id": 4,
+  "name": "Shampoo para perro",
+  "price": "35000",
+  "discount": "2",
+  "amount": "24",
+  "category": "in-sale",
+  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+  "image": "shampoo.png"
+ },
+ {
+  "id": 5,
+  "name": "shampoo para gato",
+  "price": "12500",
+  "amount": "10",
+  "discount": "5",
+  "category": "in-sale",
+  "description": "shampoo para gatos en oferta!",
+  "image": "shampoo.png"
+ },
+ {
+  "id": 6,
+  "name": "shampoo para gato",
+  "price": "15500",
+  "amount": "10",
+  "discount": "10",
+  "category": "in-sale",
+  "description": "Shampoo para perro en !oferta¡",
+  "image": "shampoo.png"
+ },
+ {
+  "id": 7,
+  "name": "Tapetes Para Perro",
+  "price": "10500",
+  "amount": "30",
+  "discount": "2",
+  "category": "in-sale",
+  "description": "Tapetes absorbentes para tu mascota, \r\n¡Gran oferta! ",
+  "image": "tapetes.png"
+ }
 ]

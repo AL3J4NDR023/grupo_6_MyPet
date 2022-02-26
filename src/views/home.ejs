@@ -13,7 +13,7 @@
                     <% visited.forEach(product =>{
                         let finalPrice = (product.price*((100-product.discount)/100)).toFixed(0)%>
                     <article>
-                        <a href="/products">
+                        <a href="/products/detail/<%= product.id %>">
                         <img src="images/<%= product.image%>" alt="Cafetera" class="product_img">
                         <div class="main-article">
                             <i class="fas fa-truck"></i>
@@ -34,7 +34,7 @@
                     <% inSale.forEach(product =>{
                         let finalPrice = (product.price*((100-product.discount)/100)).toFixed(0)%>
                     <article>
-                        <a href="/products">
+                        <a href="/products/detail/<%= product.id %>">
                         <img src="images/<%= product.image%>" alt="Cafetera" class="product_img">
                         <div class="main-article">
                             <i class="fas fa-truck"></i>
