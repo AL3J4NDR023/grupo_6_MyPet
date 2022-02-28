@@ -11,7 +11,7 @@ router.post('/login', [
     check('email').isEmail().withMessage('Debe ingresar un email valido'),
     check('password').notEmpty().withMessage('Tienes que escribir una contraseña')
 ], controller.processLogin);
-router.get('/register', controller.register);
+//router.get('/register', controller.register);
 router.get('/carrito',controller.carrito);
 
 module.exports = router

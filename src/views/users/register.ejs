@@ -10,14 +10,14 @@
         <link rel="stylesheet" href="/css/register.css">
     </head>
     <body>
-        <%- include('./partials/header')%>
+        <%- include('../partials/header')%>
         <main>
             <img  src="/images/gatos.png" alt="">
-           <form action="/register" method="post"  class="form-register">
+           <form action="/users/create" method="post"  class="form-register">
             <h2>Regitrate</h2>
             <div class="input-contenedor">
-                <input type="text" name="name" placeholder="Nombres">
-                <input type="text" name="lastname" placeholder="Apellidos">
+                <input type="text" name="first_name" placeholder="Nombres">
+                <input type="text" name="last_name" placeholder="Apellidos">
                 <input type="email"name="email" placeholder="E-mail">
                 <h4>¿Que mascota tienes?</h4>
                 <div class="interests">
@@ -26,8 +26,8 @@
                     <input type="checkbox" name="interests" value="b" id="b">
                         <label for="b">Gato</label>
                 </div>
-            <input type="password" name="pass" placeholder="Elegí tu contraseña">
-            <input type="password" name="pass_confirm" placeholder="Confirma tu contraseña">
+            <input type="password" name="password" placeholder="Elegí tu contraseña">
+        
             <div class="btn">
                 
              <input type="submit" value="Crear cuenta">
@@ -40,6 +40,6 @@
         </div >
             </form>
         </main>
-        <%- include('./partials/footer')%>
+        <%- include('../partials/footer')%>
 </body>
 </html>

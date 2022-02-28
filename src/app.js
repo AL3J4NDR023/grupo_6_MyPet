@@ -46,7 +46,12 @@ app.use('/',homeRoutes);
 const productsRoutes=require('./routes/productsRoutes')
 app.use('/products',productsRoutes);
 
-module.exports=app;
+/******************** ROUTES usuarios por ahora********************/
+const userRoutes=require('./routes/userRoutes')
+app.use('/users',userRoutes);
+
 
 /***************** ERROR 404 - DEJAR AL FINAL DE LAS ROUTES ***************/
 //app.use((req, res, next) => {res.status(404).render('error404')})
+
+module.exports=app;

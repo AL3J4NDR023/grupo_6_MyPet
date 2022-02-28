@@ -1,91 +1,101 @@
 [
-    {
-        "id":1,
-        "first_name":"Luisa",
-        "last_name":"Escobar",
-        "email":"lui.fer.0216.lfel@gmail.com",
-        "password":"luisaFda*",
-        "category":"user",
-        "image":"Luisa.jpeg"
-    },
-    {
-        "id":2,
-        "first_name":"Alejandro",
-        "last_name":"Londoño",
-        "email":"sweekly1@rediff.com",
-        "password":"gmuQ57HNsZzz",
-        "category":"user",
-        "image":"user_2.jpg"
-    },
-    {
-        "id":3,
-        "first_name":"Luis",
-        "last_name":"Cortes",
-        "email":"aetteridge2@gnu.org",
-        "password":"ZAWWERDmd9",
-        "category":"user",
-        "image":"user_3.jpg"
-    },
-    {
-        "id":4,
-        "first_name":"Will",
-        "last_name":"Butchers",
-        "email":"wbutchers3@blogspot.com",
-        "password":"qvtmUBRu",
-        "category":"user",
-        "image":"user_4.jpg"},
-    {
-        "id":5,
-        "first_name":"Kai",
-        "last_name":"Assel",
-        "email":"kassel4@disqus.com",
-        "password":"I917VT8uPXI",
-        "category":"user",
-        "image":"user_5.jpg"
-    },
-    {
-        "id":6,
-        "first_name":"Stephen",
-        "last_name":"Wey",
-        "email":"swey5@seattletimes.com",
-        "password":"JnUycrZ",
-        "category":"user",
-        "image":"user_6.jpg"
-    },
-    {
-        "id":7,
-        "first_name":"Katey",
-        "last_name":"McInerney",
-        "email":"kmcinerney6@hugedomains.com",
-        "password":"r4vNVI",
-        "category":"user",
-        "image":"user_7.jpg"
-    },
-    {
-        "id":8,
-        "first_name":"Pearla",
-        "last_name":"Krebs",
-        "email":"pkrebs7@gov.uk",
-        "password":"28ZkTOMgj5",
-        "category":"user",
-        "image":"user_8.jpg"
-    },
-    {
-        "id":9,
-        "first_name":"Hortensia",
-        "last_name":"Harby",
-        "email":"hharby8@about.com",
-        "password":"8MAevZ4KN",
-        "category":"user",
-        "image":"user_9.jpg"
-    },
-    {
-        "id":10,
-        "first_name":"Franni",
-        "last_name":"Schechter",
-        "email":"fschechter9@people.com.cn",
-        "password":"2bHw2h",
-        "category":"user",
-        "image":"user_10.jpg"
-    }
+ {
+  "id": 1,
+  "first_name": "Luisa",
+  "last_name": "Escobar",
+  "email": "lui.fer.0216.lfel@gmail.com",
+  "password": "luisaFda*",
+  "category": "user",
+  "image": "Luisa.jpeg"
+ },
+ {
+  "id": 2,
+  "first_name": "Alejandro",
+  "last_name": "Londoño",
+  "email": "sweekly1@rediff.com",
+  "password": "gmuQ57HNsZzz",
+  "category": "user",
+  "image": "user_2.jpg"
+ },
+ {
+  "id": 3,
+  "first_name": "Luis",
+  "last_name": "Cortes",
+  "email": "aetteridge2@gnu.org",
+  "password": "ZAWWERDmd9",
+  "category": "user",
+  "image": "user_3.jpg"
+ },
+ {
+  "id": 4,
+  "first_name": "Will",
+  "last_name": "Butchers",
+  "email": "wbutchers3@blogspot.com",
+  "password": "qvtmUBRu",
+  "category": "user",
+  "image": "user_4.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "Kai",
+  "last_name": "Assel",
+  "email": "kassel4@disqus.com",
+  "password": "I917VT8uPXI",
+  "category": "user",
+  "image": "user_5.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "Stephen",
+  "last_name": "Wey",
+  "email": "swey5@seattletimes.com",
+  "password": "JnUycrZ",
+  "category": "user",
+  "image": "user_6.jpg"
+ },
+ {
+  "id": 7,
+  "first_name": "Katey",
+  "last_name": "McInerney",
+  "email": "kmcinerney6@hugedomains.com",
+  "password": "r4vNVI",
+  "category": "user",
+  "image": "user_7.jpg"
+ },
+ {
+  "id": 8,
+  "first_name": "Pearla",
+  "last_name": "Krebs",
+  "email": "pkrebs7@gov.uk",
+  "password": "28ZkTOMgj5",
+  "category": "user",
+  "image": "user_8.jpg"
+ },
+ {
+  "id": 9,
+  "first_name": "Hortensia",
+  "last_name": "Harby",
+  "email": "hharby8@about.com",
+  "password": "8MAevZ4KN",
+  "category": "user",
+  "image": "user_9.jpg"
+ },
+ {
+  "id": 10,
+  "first_name": "Franni",
+  "last_name": "Schechter",
+  "email": "fschechter9@people.com.cn",
+  "password": "2bHw2h",
+  "category": "user",
+  "image": "user_10.jpg"
+ },
+ {
+  "id": 11,
+  "first_name": "pedro",
+  "last_name": "suarez",
+  "email": "p@hotmail.com",
+  "password": "12345",
+  "category": "user",
+  "image": "defaul.png"
+ }
 ]

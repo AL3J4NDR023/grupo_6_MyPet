@@ -17,7 +17,7 @@ const controller ={
       return res.render('home',{visited,inSale,toThousand,notices})
     }, 
     login: (req,res)=>{
-      return res.render(path.join(__dirname,'../views/login'));
+      return res.render(path.join(__dirname,'../views/users/login'));
     },
     processLogin : (req,res) => {
       let erros = validationResult(req);
