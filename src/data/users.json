@@ -97,5 +97,14 @@
   "password": "12345",
   "category": "user",
   "image": "defaul.png"
+ },
+ {
+  "id": 12,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "user",
+  "image": "defaul.png"
  }
 ]
