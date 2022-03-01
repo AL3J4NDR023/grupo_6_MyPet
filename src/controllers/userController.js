@@ -20,7 +20,7 @@ const controller={
           image:'defaul.png'
           
         };
-       
+        console.log(newUser)
         users.push(newUser);
         fs.writeFileSync(usersFilePath,JSON.stringify(users,null,' '));
         res.redirect('/login')

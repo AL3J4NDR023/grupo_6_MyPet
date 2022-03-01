@@ -12,6 +12,7 @@ const notices= JSON.parse(fs.readFileSync(noticesFilePath, 'utf8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const visited= products.filter((producto)=> producto.category ==='visited')
 const inSale=products.filter((producto)=> producto.category ==='in-sale')
+
 const controller ={
     home: (req, res) => {
       return res.render('home',{visited,inSale,toThousand,notices})
@@ -56,9 +57,6 @@ const controller ={
       }
 
 
-    },
-    register: (req,res)=>{
-      return res.render(path.join(__dirname,'../views/register'));
     }, 
     carrito: (req,res)=>{
       return  res.render(path.join(__dirname,'../views/carrito'));
