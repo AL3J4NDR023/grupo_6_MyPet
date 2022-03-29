@@ -11,6 +11,7 @@ const router = express.Router();
 /*********** REQUIRE CONTROLLERS ********************** */
 const controller = require('../controllers/homeController')
 router.get('/', controller.home);
+router.get('/producto/detalle/:id',controller.detalle);
 //router.get('/login', controller.login);
 //router.post('/login', validations , controller.processLogin);
 //router.get('/register', controller.register);

@@ -14,7 +14,7 @@ const controller = require('../controllers/userController')
 router.get('/register',controller.register);
 router.post('/create', controller.create);
 router.get('/login', controller.login);
-router.post('/login', validations , controller.processLogin);
+router.post('/process_login',  controller.processLogin);
 router.get('/check', function(req,res){
     if(req.session.usuarioLogueado == undefined){
         res.send("No estas logueado");

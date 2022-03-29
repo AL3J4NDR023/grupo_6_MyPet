@@ -1,57 +1,47 @@
-/*********** REQUIRE EXPRESS ********************** */
-const express = require('express'); //requerir express
-const session = require('express-session');
-const app = express(); // asignar la funcion
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
+var indexRouter = require('./routes/index');
+var userRouter = require('./routes/user');
+var adminRouter = require('./routes/admin');
+//var usersRouter = require('./routes/users');
 
-app.use(session({
-	secret: "Shhh, It's a secret",
-	resave: false,
-	saveUninitialized: false,
-}));
+var app = express();
 
-/******** PATCH ********************** */
-const path = require('path'); // funcion
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-/******************** RECURSOS ESTATICOS (PUBLIC) *******************/
-const publicPath = path.join(__dirname, '../public')// resolver ruta
-app.use(express.static(publicPath)); //traer los elementos public - recursos estaticos
-
-/**************************LISTEN PORT ***************************** */
-app.listen(3001,()=>{  //correr servidor
-    console.log("Server Run")
-})
-
-/*********************** EJS****************************** */
-app.set('view engine', 'ejs')// template engine - EJS
-app.set('views', 'src/views')// template engine - EJS
-
-//captura informacion metodo post
-app.use(express.urlencoded({extended:false}));
+app.use(logger('dev'));
 app.use(express.json());
-
-/** metodo para PUT AND DELETE 
- *  npm install method-override --save // TOCA INSTALAR
-*/
-
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
-/******************** ROUTES ********************/
-const homeRoutes = require('./routes/homeRoutes')
-app.use('/',homeRoutes);
+app.use('/', indexRouter);
+app.use('/user', userRouter);
+app.use('/admin', adminRouter);
+//app.use('/users', usersRouter);
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
-/******************** ROUTES productos por ahora********************/
-const productsRoutes=require('./routes/productsRoutes')
-app.use('/products',productsRoutes);
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-/******************** ROUTES usuarios por ahora********************/
-const userRoutes=require('./routes/userRoutes')
-app.use('/users',userRoutes);
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
-
-/***************** ERROR 404 - DEJAR AL FINAL DE LAS ROUTES ***************/
-//app.use((req, res, next) => {res.status(404).render('error404')})
-
-module.exports=app;
+module.exports = app;

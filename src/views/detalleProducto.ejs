@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+</head>
+<body>
+    <%- include('./partials/header')%>
+        <div class="container mt-2 mb-2 ">
+        <div class="card w-100 px-5 rounded border border-3" >
+        
+        <div class="d-flex flex-row bd-highlight mb-3 d-flex justify-content-center mt-5">
+            <div class="images " style="width: 50%;">
+        <img src="/images/products/<%=product.image%>" class="card-img-top mx-auto " style="width:70%" alt="...">
+        
+         </div>
+         <div class="" style="width:50%;">
+          <h2 class="card-title "><%=product.name%></h2>
+          <h3 class="fst-italic fs-4" ">Marca:<%=product.category%></h3>
+          <h3 class="text-center">$<%=product.price%></h3>
+         
+            <div class="d-flex justify-content-center">
+            <form action="" class="d-flex flex-column gap-2" >
+            <h3 class="text-center">Cantidad</h3>
+            <input type="number" >
+            <button type="submit" class="btn text-white" style="background-color:#d63384;">Agregar al carrito</button>
+            </form>
+        </div>
+
+            <ul class="nav nav-tabs mt-2">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="#">Descripción</a>
+            </li>
+            
+          </ul>
+          <div class="border border-2 "><p><%=product.description%></p>
+        </div>
+          
+        </div>
+
+
+
+
+        </div>
+
+         </div>
+        </div>
+       
+         <%- include('./partials/footer')%>
+
+</body>
+
+</html>
