@@ -30,4 +30,7 @@
 #### Logo: https://www.figma.com/file/2DBf42y8dMjEY0C63HqEj2/Untitled?node-id=0%3A1
 
 ## Base de datos
+
 #### Para implementar la base de datos se debe crear un esquema de nombre "mypet" donde se corran los archivos adjuntos tablas.sql con el cual se crean las tablas de la base de datos y inserciones.sql con el cual se poblan las mismas
+
+## Todos trabajamos en el sprint 6
