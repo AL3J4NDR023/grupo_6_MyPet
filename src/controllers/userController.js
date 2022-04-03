@@ -24,8 +24,12 @@ const controller={
             return res.render(path.join(__dirname,'../views/users/register'));
         },
         procesoRegistro: async (req, res) => {
-            
-            
+            const errorsValidator =validationResult(req);
+            console.log(errorsValidator)
+                if(errorsValidator.errors.length>0){
+                    return res.render(path.join(__dirname,'../views/users/register'),{errors:errorsValidator.mapped(),old:req.body});
+
+                }else{
                 const {name,lastname,email,password, address,cellphone}=req.body
                 await db.User.create({
                     name,
@@ -34,10 +38,12 @@ const controller={
                     address,
                     cellphone,
                     password: password,
-                    idRol:1
-                })
-                return res.redirect('/');
-        
+                    idRol:1,
+                    image: req.file.filename
+                    
+                 })
+                    return res.redirect('/');
+                }
         }
       
       
