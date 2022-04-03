@@ -1,26 +1,18 @@
 const express= require('express');
 const router = express.Router();
-const { check } = require('express-validator');
-
-const validations=[
-    check('email').isEmail().withMessage('Debe ingresar un email valido'),
-    check('password').notEmpty().withMessage('Tienes que escribir una contraseña')
-    
-  ]
-
-
+const multer= require('multer')
 const controller = require('../controllers/userController')
+const loginValidacion = require('../validacion/loginValidacion');
+const registroValidacion = require('../validacion/registroValidacion');
 
-router.get('/register',controller.register);
-router.post('/create', controller.create);
+const upload= require('../multers/multerUser')
+
 router.get('/login', controller.login);
-router.post('/process_login',  controller.processLogin);
-router.get('/check', function(req,res){
-    if(req.session.usuarioLogueado == undefined){
-        res.send("No estas logueado");
-    }else{
-        res.send("El usuario logueado es " + req.session.usuarioLogueado.email);
-    }
-});
+router.post('/login', loginValidacion, controller.procesoLogin);
+
+// renderizar y procesar register
+router.get('/registro', controller.registro);
+router.post('/register', upload.single('fileUser'), controller.procesoRegistro);
+
 
 module.exports = router;
