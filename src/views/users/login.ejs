@@ -16,11 +16,16 @@
 <body class="text-center " style="background-color: #badf34;">
  
   <main class="form-signin position-absolute top-0 start-50 translate-middle-x mt-5" style="width: 30%">
-    <form action="/user/login" method="POST">
+    <form action="/user/processlogin" method="POST">
       <a href="/"><img class="mb-4" src="../images/logo.svg" alt="" width="70%" height="70%"></a>
       <h1 class="h3 mb-3 fw-normal">Iniciar Sección</h1>
-  
+      <% if (locals.errors && errors.email){ %>
+        <div class="alert alert-danger">
+            <%= errors.email.msg %> 
+        </div>
+    <% } %>
       <div class="form-floating">
+       
         <input type="email" class="form-control"name="email"id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Email</label>
       </div>

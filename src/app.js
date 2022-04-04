@@ -1,15 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session= require('express-session');
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/userRoutes');
+const adminRouter = require('./routes/adminRoutes');
+const userLoggedAll= require('./middlewares/userLoggedAll')
+//const usersRouter = require('./routes/users');
 
-var indexRouter = require('./routes/index');
-var userRouter = require('./routes/userRoutes');
-var adminRouter = require('./routes/adminRoutes');
-//var usersRouter = require('./routes/users');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,6 +24,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+app.use(session({
+  secret:'grupo6',
+  resave: false,
+  saveUninitialized: false
+}))
+
+
+//Middleware
+app.use(userLoggedAll)
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);
