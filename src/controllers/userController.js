@@ -10,19 +10,25 @@ const controller={
         procesoLogin: async (req, res) => {
            
             const {email,password} = req.body;
-            user= await db.User.findOne({
+            userLogin= await db.User.findOne({
                 where: {
                     email: email
-                }
+                } ,
+                raw: true, // convertir en obeto
+                nest: true,
             })
             
-            if(user){
-                pass=bcrypt.compareSync(password,user.password);
+            if(userLogin){
+                pass=bcrypt.compareSync(password,userLogin.password);
                 if(pass){
-                delete user.password;
-                req.session.userLogin =user;
-                 console.log(req.session)
+                   
+                    delete userLogin.password
+                req.session.userLogin =userLogin;
+                    if(req.session.userLogin.idRol ==2){
+                        return res.redirect('/admin')
+                    }else{
                     return res.redirect('/')
+                    }
                 }
             }
                 return res.render(path.join(__dirname,'../views/users/login'),{

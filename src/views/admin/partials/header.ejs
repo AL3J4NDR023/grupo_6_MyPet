@@ -22,9 +22,18 @@
         <main id="main"class=" form-signin  mt-1 " 
         style="width: 100%;" >
     <div class=" " >
-        <div class="mt-1 mx-2  flex-column d-flex d-flex justify-content-center  ">
-      <a href="/user/login"><button class=" btn  mb-2 w-100" style="background-color: #FFFD77;">Login</button></a>
-    </div>
+      <ul class="navbar-nav " >
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <%=locals.userLogin.name%> <img class="rounded-circle" src="/images/users/<%=locals.userLogin.image%>" alt="" width="60" height="50" class="d-inline-block align-text-top">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="/user/logout">Cerrar Sección</a></li>
+            
+          </ul>
+        </li>
+      </ul>
     </div>
     </main>
      

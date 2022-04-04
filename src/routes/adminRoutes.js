@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-
+const express = require('express');
+const router = express.Router();
+const authAdmin= require('../middlewares/authAdmin')
 
 /** Controller Index */
 const controller = require('../controllers/adminController')
-router.get('/',controller.adminHome);
-router.get('/newproducto',controller.newProducto);
+router.get('/',authAdmin,controller.adminHome);
+router.get('/newproducto',authAdmin,controller.newProducto);
 
 module.exports = router;
