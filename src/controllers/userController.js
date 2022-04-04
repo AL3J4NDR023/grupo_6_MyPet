@@ -25,7 +25,7 @@ const controller={
         },
         procesoRegistro: async (req, res) => {
             const errorsValidator =validationResult(req);
-            console.log(errorsValidator)
+            
                 if(errorsValidator.errors.length>0){
                     return res.render(path.join(__dirname,'../views/users/register'),{errors:errorsValidator.mapped(),old:req.body});
 

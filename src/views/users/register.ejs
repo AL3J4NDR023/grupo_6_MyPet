@@ -1,0 +1,121 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPet-Login</title>
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <!--Google icons-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      
+  </head>
+  <body class="text-center " style="background-color: #ebd3f4;">
+      
+    <main class="form-signin position-absolute top-0 start-50 translate-middle-x mt-5" style="width: 50%">
+      <a href="/"><img class="mb-4" src="../images/logo.svg" alt="" width="70%" height="100%"></a>
+      
+      <form action="/user/register" method="POST" enctype="multipart/form-data">
+        
+        
+          <h1 class="h3 mb-3 fw-normal">Registro</h1>
+             
+             
+              
+            <div class="form-floating mt-1 mb-1">
+   
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nombres" value="<%= locals.old ? old.name: null %>">
+              <label for="name">Nombres</label> 
+            </div>
+            <% if (locals.errors && errors.name) { %>
+                <div class="alert alert-danger">
+                    <%= errors.name.msg %> 
+                </div>
+            <% } %>
+              
+            <div class="form-floating mt-1 mb-1 ">
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos " value="<%= locals.old ? old.lastname: null %>">
+              <label for="lastName">Apellidos</label>
+            </div>
+            
+            <% if (locals.errors && errors.lastname) { %>
+                <div class="alert alert-danger">
+                    <%= errors.lastname.msg %> 
+                </div>
+            <% } %>
+             
+            <div class="form-floating mt-1 mb-1">
+              <input type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%= locals.old ? old.address: null %>">
+              <label for="lastName">Dirección</label>
+            </div>
+            <% if (locals.errors && errors.address) { %>
+                <div class="alert alert-danger">
+                    <%= errors.address.msg %> 
+                </div>
+            <% } %>
+             
+             
+            <div class="form-floating mt-1 mb-1">
+              <input type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%= locals.old ? old.cellphone: null %>">
+              <label for="lastName">Telefono</label>
+            </div>
+            
+            <% if (locals.errors && errors.cellphone) { %>
+                <div class="alert alert-danger">
+                    <%= errors.cellphone.msg %> 
+                </div>
+            <% } %>
+             
+            <div class="form-floating mt-1 mb-1">
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="<%= locals.old ? old.email: null %>">
+              <label for="floatingInput">Email</label>
+            </div>
+            
+            <% if (locals.errors && errors.email) { %>
+                <div class="alert alert-danger">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
+             
+            <div class="form-floating mt-1 mb-1">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<%= locals.old ? old.password: null %>">
+              <label for="floatingPassword">Contraseña</label>
+              
+            </div>
+             
+            <div class="form-floating mt-1 mb-1">
+              <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Password">
+              <label for="floatingPassword">Confirmar Contraseña</label>
+              
+            </div>
+            
+            <% if (locals.errors && errors.password) { %>
+                <div class="alert alert-danger">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
+            <% if (locals.errors && errors.passwordConfirm) { %>
+                <div class="alert alert-danger">
+                    <%= errors.passwordConfirm.msg %> 
+                </div>
+            <% } %>
+            
+            <div class="form-floating mt-1 mb-1">
+              <input type="file" class="form-control" id="fileUser" name="fileUser" placeholder="Avatar">
+              <label for="floatingPassword">Avatar</label>
+            </div>
+            <% if (locals.errors && errors.fileUser) { %>
+                <div class="alert alert-danger">
+                    <%= errors.fileUser.msg %> 
+                </div>
+            <% } %>
+            <button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Registrate</button>
+        
+      </form>
+    
+    </main>
+  
+  
+    
+  </body>
+  </html>
