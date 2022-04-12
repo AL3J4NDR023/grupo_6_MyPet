@@ -6,5 +6,6 @@ const authAdmin= require('../middlewares/authAdmin')
 const controller = require('../controllers/adminController')
 router.get('/',authAdmin,controller.adminHome);
 router.get('/newproducto',authAdmin,controller.newProducto);
+router.get('/registroproducto',authAdmin,controller.registroProducto);
 
 module.exports = router;

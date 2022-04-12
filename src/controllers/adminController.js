@@ -10,6 +10,9 @@ const controller={
     newProducto: async(req,res) => {
        const products= await db.Product.findAll()
        return res.render(path.join(__dirname,'../views/admin/newProducto.ejs'));
+    },
+    registroProducto: async(req,res)=>{
+       
     }
 }
 module.exports=controller;
