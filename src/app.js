@@ -4,10 +4,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session= require('express-session');
+
+//Rutas
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/userRoutes');
 const adminRouter = require('./routes/adminRoutes');
-const userLoggedAll= require('./middlewares/userLoggedAll')
+const userLoggedAll= require('./middlewares/userLoggedAll');
+const productApi= require('./routes/api/productApiRoutes');
+
+const bodyParser = require('body-parser');
+const cors = require('cors');
 //const usersRouter = require('./routes/users');
 
 
@@ -30,7 +36,9 @@ app.use(session({
   saveUninitialized: false
 }))
 
-
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //Middleware
 app.use(userLoggedAll)
 
@@ -38,6 +46,10 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/admin', adminRouter);
 //app.use('/users', usersRouter);
+
+//API
+app.use('/api/products', productApi);
+
 
 // catch 404 and forward to error handler
 //app.use(function(req, res, next) {

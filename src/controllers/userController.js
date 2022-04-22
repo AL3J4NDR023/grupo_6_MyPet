@@ -47,13 +47,14 @@ const controller={
             return res.render(path.join(__dirname,'../views/users/register'));
         },
         procesoRegistro: async (req, res) => {
+            console.log(req.body);
             const errorsValidator =validationResult(req);
             
                 if(errorsValidator.errors.length>0){
                     return res.render(path.join(__dirname,'../views/users/register'),{errors:errorsValidator.mapped(),old:req.body});
 
                 }else{
-                const {name,lastname,email,password, address,cellphone,passwordConfirm}=req.body
+                const {name,lastname,email,password, address,cellphone}=req.body
                 
                 await db.User.create({
                     name,

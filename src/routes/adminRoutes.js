@@ -6,6 +6,19 @@ const authAdmin= require('../middlewares/authAdmin')
 const controller = require('../controllers/adminController')
 router.get('/',authAdmin,controller.adminHome);
 router.get('/newproducto',authAdmin,controller.newProducto);
-router.get('/registroproducto',authAdmin,controller.registroProducto);
+router.post('/create', controller.create);
+//router.post('/registro',controller.registroProducto);
+
+
+
+/** new and create product  */
+//router.get('/new-product', controller.newProducts);
+
+/** edit product */
+//router.get('/edit/:id',controller.edit); 
+//router.patch('/edit/:id', controller.update); 
+
+/** delete product */
+//router.delete('/delete/:id',controller.delete)
 
 module.exports = router;

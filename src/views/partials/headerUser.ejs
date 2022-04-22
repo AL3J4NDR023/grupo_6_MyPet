@@ -27,9 +27,14 @@
            <img class="rounded-circle" src="/images/users/<%=locals.userLogin.image%>" alt="" width="60" height="50" class="d-inline-block align-text-top">
         </a>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <%if(locals.userLogin.idRol==2){%>
           <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><a class="dropdown-item" href="/admin">Administración</a></li>
           <li><a class="dropdown-item" href="/user/logout">Cerrar Sección</a></li>
-          
+          <%}else{%>
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="/user/logout">Cerrar Sección</a></li>
+            <%}%>
         </ul>
       </li>
     </ul>

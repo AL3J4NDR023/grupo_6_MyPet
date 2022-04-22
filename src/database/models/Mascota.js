@@ -1,7 +1,7 @@
 module.exports =(sequelize,dataTypes)=>{
-    const alias= 'Category';
+    const alias= 'Mascota';
     const cols={
-        idCategory:{
+        idMascota:{
             type: dataTypes.INTEGER(11),
             primaryKey: true, 
             allowNull: false,
@@ -13,18 +13,17 @@ module.exports =(sequelize,dataTypes)=>{
         }
     }; 
     const config={
-        tableName: 'category',
+        tableName: 'mascota',
         timestamps: false
     }
-    const Category=sequelize.define(alias,cols,config);
-   Category.associate=function(models){
-       Category.belongsToMany(models.Product,{
-            as:'product',
-            through:'categoryproducts',
-            foreignKey:'idCategory',
-            otherKey:'idProduct',
+    const Mascota=sequelize.define(alias,cols,config);
+   Mascota.associate=function(models){
+       Mascota.belongsToMany(models.Product,{
+            as:'mascota',
+            through:'mascotaproducts',
+            foreignKey:'idMascota',
             timestamps: false
         })
     }
-    return Category;
+    return Mascota;
 }
