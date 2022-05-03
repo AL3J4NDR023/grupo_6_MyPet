@@ -1,7 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const logger = require('morgan');
 const session= require('express-session');
 
@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookies());
 app.use(express.static(path.join(__dirname, '../public')));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
