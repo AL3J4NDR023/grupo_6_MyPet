@@ -25,5 +25,5 @@ module.exports =(sequelize,dataTypes)=>{
             timestamps: false
         })
     }
-    return Mascota;
+    return Mascota; 
 }

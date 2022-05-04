@@ -37,6 +37,9 @@ const productApiController={
 
     },
     create: async (req, res)=>{
+        
+        console.log(req.body.name);
+      console.log(req.body.price);
         try {
         const {name,price, amount,discount,idMascota,idCategory,description}=req.body;
         const confirm = await db.Product.create({

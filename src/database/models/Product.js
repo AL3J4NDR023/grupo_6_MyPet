@@ -31,7 +31,14 @@ module.exports =(sequelize,dataTypes)=>{
         },
         idBrand:{
             type: dataTypes.INTEGER(11)
+        },
+        idMascota:{
+            type: dataTypes.INTEGER(11)
+        },
+        idCategory:{
+            type: dataTypes.INTEGER(11)
         }
+        
     }; 
     const config={
         tableName: 'products',
@@ -44,6 +51,10 @@ module.exports =(sequelize,dataTypes)=>{
         Product.belongsTo(models.Brand,{
             as:'brand',
             foreignKey:'idBrand'
+        })
+        Product.belongsTo(models.Mascota,{
+            as:'mascota',
+            foreignKey:'idMascota'
         })
 
         Product.belongsToMany(models.Category,{

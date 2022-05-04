@@ -15,4 +15,7 @@ router.get('/registro',userLogin, controller.registro);
 router.post('/register', upload.single('fileUser'), registroValidacion, controller.procesoRegistro);
 router.get('/logout',controller.logout);
 
+//perfil usurio
+router.get('/profile', controller.profile);
+
 module.exports = router;

@@ -73,6 +73,9 @@ const controller={
         logout:(req,res)=>{
             req.session.destroy();
             res.redirect('/');
+        },
+        profile: (req,res)=>{
+            res.render(path.join(__dirname, '../views/users/profile.ejs'))
         }
       
       

@@ -26,8 +26,9 @@ const controller={
     },
 
     create: (req,res)=>{
-      
-        let newProduct ={
+      console.log(req.body);
+      console.log(req.body.price);
+       /* let newProduct ={
           id:products[products.length-1].id + 1,
           ...req.body,
           image:'tapetes.png'
@@ -35,8 +36,9 @@ const controller={
 
         products.push(newProduct);
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null,' '));
-        res.redirect('/products/list-products')
-
+       
+        */
+        res.send('/products/list-products')
     },
     /**EDIT PRODUCT */
     edit:(req,res)=>{

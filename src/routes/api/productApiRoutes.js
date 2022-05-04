@@ -9,7 +9,7 @@ router.get('/', productApiController.list);
 router.get('/:id', productApiController.detail);
 
 //Agregar una producto
-router.post('/create', productApiController.create);
+//router.post('/create', productApiController.create);
 //Modificar una película
 //router.put('/update/:id', productApiController.update);
 //Eliminar una película

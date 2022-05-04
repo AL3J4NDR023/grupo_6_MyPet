@@ -13,12 +13,18 @@ const controller={
       const mascota= await db.Mascota.findAll();
       const brand= await db.Brand.findAll({order:[['name']]});
       
-       return res.render(path.join(__dirname,'../views/admin/newProduct.ejs'),{category,mascota,brand});
+       return res.render(path.join(__dirname,'../views/admin/crearProducto.ejs'),{category,mascota,brand});
     },
-    create: async(req,res)=>{
+    create: async(req, res) => {
       
-      console.log(req.body);
-      res.redirect('/admin')
+      const {name,price,amount,description,color,brand,mascota,category} = req.body;
+      await db.Product.create({name,price, amount,description,color,
+        idBrand:parseInt(brand),
+        idMascota:parseInt(mascota),
+        idCategory:parseInt(category), 
+        image: req.file.filename
+      });
+      return res.redirect('/admin');
   }
 }
-module.exports=controller;
+module.exports=controller; 

@@ -11,7 +11,7 @@ const controller = require('../controllers/productsController')
 
 /** new and create product  */
 //router.get('/new-product', controller.newProducts);
-//router.post('/create', controller.create);
+router.post('/create', controller.create);
 
 /** edit product */
 //router.get('/edit/:id',controller.edit); 

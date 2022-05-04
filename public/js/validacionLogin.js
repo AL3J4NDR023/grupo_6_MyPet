@@ -1,5 +1,5 @@
 
-window.addEventListener("load", function(){
+/*window.addEventListener("load", function(){
     
     const formulario= document.getElementById("formulario");
     
@@ -29,4 +29,4 @@ window.addEventListener("load", function(){
         
     }
 
-})
+})*/

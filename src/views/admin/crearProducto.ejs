@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/header')%>
+      <section id="container" class="container mt-2 mb-2 w-50">
+        <main>
+            <h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Crear Producto</h2>
+            <form class="px-2  rounded-1" method="post" action="/admin/nuevo" enctype="multipart/form-data" style="background-color:#edf5f5" >
+            
+            
+                <div class="input-group mb-3">
+                    <span class="input-group-text mt-2" id="basic-addon1">Nombre</span>
+                    <input type="text" class="form-control mt-2" placeholder="Nombre del producto" name="name">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" min="1" placeholder="Precio del producto"name="price">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Cantidad</span>
+                    <input type="number" class="form-control" min="1" placeholder="Cantidad del producto"name="amount">
+                  </div>
+                  
+                  <label for="basic-url" class="form-label text-decoration-underline ">Imagen Del Producto</label>
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control" name="image" >
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ">Descripción</span>
+                    <textarea class="form-control "name="description"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Colores</span>
+                  <select class="form-select" name="color">
+                    <option selected>Ninguno</option>
+                    <option value="1">Azul</option>
+                    <option value="2">Negro</option>
+                    <option value="3">Verde</option>
+                  </select>
+                </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Marca</span>
+                  <select class="form-select" name="brand">
+                    <% for( let i = 0; i < brand.length; i++ ){%>
+                        <option value="<%=brand[i].id%>"><%=brand[i].name%></option>
+                        <%}%>
+                  </select>
+                </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Mascota</span>
+                  <select class="form-select" name="mascota">
+                    <% for( let i = 0; i < mascota.length; i++ ){%>
+                        <option value="<%=mascota[i].idMascota%>"><%=mascota[i].name%></option>
+                        <%}%>
+                  </select>
+                </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Categoria</span>
+                  <select class="form-select" name="category">
+                    <% for( let i = 0; i < category.length; i++ ){%>
+                        <option value="<%=category[i].idCategory%>"><%=category[i].name%></option>
+                        <%}%>
+                  </select>
+                </div>
+                <button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Crear Producto</button>
+            </form>
+        </section>
+        <%- include('./partials/footer')%>
+</body>
+</html>

@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const authAdmin= require('../middlewares/authAdmin')
+const upload= require('../middlewares/multers/multerProducto')
 
 /** Controller Index */
 const controller = require('../controllers/adminController')
 router.get('/',authAdmin,controller.adminHome);
 router.get('/newproducto',authAdmin,controller.newProducto);
-router.post('/create', controller.create);
+router.post('/nuevo',upload.single('image'),authAdmin,controller.create);
 //router.post('/registro',controller.registroProducto);
 
 
