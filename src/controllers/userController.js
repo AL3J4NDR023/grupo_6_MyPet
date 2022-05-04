@@ -23,8 +23,14 @@ const controller={
                 if(pass){
                    
                     delete userLogin.password
-                req.session.userLogin =userLogin;
+                    req.session.userLogin =userLogin;
+                
                     if(req.session.userLogin.idRol ==2){
+
+                        if(req.body.remember_me){
+                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                        }
+
                         return res.redirect('/admin')
                     }else{
                     return res.redirect('/')
@@ -71,6 +77,7 @@ const controller={
                 }
         },
         logout:(req,res)=>{
+            res.clearCookie('userEmail')
             req.session.destroy();
             res.redirect('/');
         },
