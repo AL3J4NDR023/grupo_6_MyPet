@@ -1,6 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
 const Sequelize=require('sequelize');
+const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 const controller={
 
@@ -30,8 +31,40 @@ const controller={
       return res.redirect('/admin');
   },
   listaUsuarios: async(req, res) => {
-    const usuarios = await db.User.findAll();
+    const usuarios = await db.User.findAll({
+      include: [{ association: 'rol' },]
+  });
     return res.render(path.join(__dirname,'../views/admin/listaUsuarios.ejs'),{usuarios})
+  },
+  createUser: async (req, res) => {
+    const rol= await db.Rol.findAll();
+    
+    return res.render(path.join(__dirname,'../views/admin/crearUsuario.ejs'),{rol})
+  },
+  newUser: async (req, res) => {
+    const errorsValidator =validationResult(req);
+            
+    if(errorsValidator.errors.length>0){
+      const rol= await db.Rol.findAll();
+      return res.render(path.join(__dirname,'../views/admin/crearUsuario.ejs'),{rol},{errors:errorsValidator.mapped(),old:req.body});
+
+    }else{
+    const {name,lastname,email,password, address,cellphone,idRol, image}=req.body
+    
+    await db.User.create({
+        name,
+        lastname,
+        email,
+        address,
+        cellphone,
+        password: bcrypt.hashSync(password,10),
+        idRol,
+        image
+        
+     })
+        return res.redirect('/');
+    }
   }
+  
 }
 module.exports=controller; 

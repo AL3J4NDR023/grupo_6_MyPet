@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('./partials/head')%>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('./partials/header')%>
-      <section id="container" class="container mt-2 mb-2 w-50">
-        <main>
-            <h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Crear Producto</h2>
+    <section id="container" class="container mt-2 mb-2 w-50">
+      <main>
+        <a href="/admin"><button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Regresar</button></a>
+        <h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Crear Producto</h2>
             <form class="px-2  rounded-1" method="post" action="/admin/nuevo" enctype="multipart/form-data" style="background-color:#edf5f5" >
             
             
@@ -73,7 +74,7 @@
                   </select>
                 </div>
                 <button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Crear Producto</button>
-            </form>
+              </form>
         </section>
         <%- include('./partials/footer')%>
 </body>

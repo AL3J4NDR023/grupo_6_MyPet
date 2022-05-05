@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mypet</title>
+    <%- include('./partials/head')%>
+</head>
+<body>
+    <%- include('./partials/header')%>
+   
+    <section id="container" class="container mt-2 mb-2 w-50">
+        <main>
+          <a href="/admin/listaUsuarios"><button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Regresar</button></a>
+          <h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Crear Usuario</h2>
+              <form class="px-2  rounded-1" method="post" action="/admin/newUser"  style="background-color:#edf5f5" >
+              
+              
+                <div class="form-floating mt-1 mb-1">
+ 
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombres" value="<%= locals.old ? old.name: null %>">
+                    <label for="name">Nombres</label> 
+                  </div>
+                  <% if (locals.errors && errors.name) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.name.msg %> 
+                      </div>
+                  <% } %>
+                    
+                  <div class="form-floating mt-1 mb-1 ">
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos " value="<%= locals.old ? old.lastname: null %>">
+                    <label for="lastName">Apellidos</label>
+                  </div>
+                  
+                  <% if (locals.errors && errors.lastname) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.lastname.msg %> 
+                      </div>
+                  <% } %>
+                   
+                  <div class="form-floating mt-1 mb-1">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%= locals.old ? old.address: null %>">
+                    <label for="lastName">Dirección</label>
+                  </div>
+                  <% if (locals.errors && errors.address) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.address.msg %> 
+                      </div>
+                  <% } %>
+                   
+                   
+                  <div class="form-floating mt-1 mb-1">
+                    <input type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%= locals.old ? old.cellphone: null %>">
+                    <label for="lastName">Telefono</label>
+                  </div>
+                  
+                  <% if (locals.errors && errors.cellphone) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.cellphone.msg %> 
+                      </div>
+                  <% } %>
+                   
+                  <div class="form-floating mt-1 mb-1">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="<%= locals.old ? old.email: null %>">
+                    <label for="floatingInput">Email</label>
+                  </div>
+                  
+                  <% if (locals.errors && errors.email) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.email.msg %> 
+                      </div>
+                  <% } %>
+                   
+                  <div class="form-floating mt-1 mb-1">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<%= locals.old ? old.password: null %>">
+                    <label for="floatingPassword">Contraseña</label>
+                    
+                  </div>
+                   
+                  <div class="form-floating mt-1 mb-1">
+                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Password">
+                    <label for="floatingPassword">Confirmar Contraseña</label>
+                    
+                  </div>
+                  
+                  <% if (locals.errors && errors.password) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.password.msg %> 
+                      </div>
+                  <% } %>
+                  <% if (locals.errors && errors.passwordConfirm) { %>
+                      <div class="alert alert-danger">
+                          <%= errors.passwordConfirm.msg %> 
+                      </div>
+                  <% } %>
+                  
+                  <div class="form-floating  mb-3">
+                    <h4>Avatar</h4>
+                  </div>
+
+                  <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_2.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_2.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                    </div>
+                </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_3.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_3.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_10.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_10.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_8.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_8.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_5.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_5.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_9.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_9.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-2 bd-highlight"><div class="form-check mt-4 ">
+                        <input class="form-check-input" type="radio" name="image" id="exampleRadios1" value="user_7.png" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          
+                          <img src="/images/users/user_7.png " height="60rem" width="60rem" class="img-fluid rounded-circle mb-2">
+                        </label>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  
+                  <div class="input-group mb-3 mt-2">
+                    <span class="input-group-text">Rol</span>
+                  <select class="form-select" name="idRol">
+                    <% for( let i = 0; i < rol.length; i++ ){%>
+                        <option value="<%=rol[i].id%>"><%=rol[i].name%></option>
+                        <%}%>
+                  </select>
+                  <button class="w-100 btn btn-lg btn-dark mb-2 mt-3" type="submit">Crear Usuario</button>
+              
+                </form>
+          </section>
+    <%- include('./partials/footer')%>
+</body>
+</html> 
