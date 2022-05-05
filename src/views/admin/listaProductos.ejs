@@ -7,8 +7,9 @@
     <%- include('./partials/header')%>
     <section id="container">
 		
-		<h1 class="text-center">Lista de productos</h1>
+		<h1 class="text-center">Lista De Productos</h1>
 		<a href="/admin/newProducto" id="newproducto" class="btn_new px-5 "><button class="btn btn-primary px-2 mb-2">Crear Producto</button></a>
+		<a href="/admin/listaUsuarios" id="newproducto" class="btn_new px-5 "><button class="btn btn-primary px-2 mb-2">Lista Usuarios</button></a>
 		
 		
         <div class="container">
@@ -29,12 +30,12 @@
 					
 					<td><%= product.id%></td>
 					<td><%= product.name%></td>
-					<td><%= product.category%></td>
-					<td>ninguno</td>
+					<td><%= product.category.name%></td>
+					<td>defaul</td>
 					<td><%= product.price%></td>
 					<td><%= product.amount%></td>
-					<td><%= product.idBrand%></td>
-					<td><%= product.image%></td>
+					<td><%= product.brand.name%></td>
+					<td><img src="/images/products/<%= product.image%> " height="60rem" width="60rem" class="img-fluid rounded-circle"></td>
 					<td>
 						<div class="d-flex gap-2">
 						<a class="link_edit" href="/products/edit/<%=product.id%>"><button class="btn btn-success">Editar</button></a>

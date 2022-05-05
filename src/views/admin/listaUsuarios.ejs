@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<%- include('./partials/head')%>
+    </head>
+<body>
+    <%- include('./partials/header')%>
+    <section id="container">
+		
+		<h1 class="text-center">Lista De Usuarios</h1>
+		<a href="#" id="newproducto" class="btn_new px-5 "><button class="btn btn-primary px-2 mb-2">Crear Usuario</button></a>
+		
+		
+        <div class="container">
+		<table class="table table-hover border border-2">
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>Email</th>
+				<th>Cellphone</th>
+				<th>Dirección</th>
+				<th>Fotos</th>
+				<th>Roles</th>
+				<th>Acciones</th>
+			</tr>
+			<% usuarios.forEach(usuario =>{%>
+				<tr>
+					
+					<td><%= usuario.id%></td>
+					<td><%= usuario.name%></td>
+					<td><%= usuario.lastname%></td>
+					<td><%= usuario.email%></td>
+					<td><%= usuario.cellphone%></td>
+					<td><%= usuario.address%></td>
+					<td><img src="/images/users/<%= usuario.image%> " height="60rem" width="60rem" class="img-fluid rounded-circle"></td>
+					<td><%= usuario.idRol%></td>
+                    
+					<td>
+						<div class="d-flex gap-2">
+						<a class="link_edit" href="/products/edit/<%=usuario.id%>"><button class="btn btn-success">Editar</button></a>
+
+						<form action="/usuarios/delete/<%=usuario.id%>?_method=delete" method="POST">
+							<button type="submit"class="btn btn-danger">Borrar</button>
+						</form>
+					</div>
+					</td>
+					
+				</tr>
+				<%})%>
+        </table>
+        </div>
+    </section>
+	<%- include('./partials/footer')%>
+</body>
+</html>

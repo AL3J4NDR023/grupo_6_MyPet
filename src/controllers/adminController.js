@@ -5,7 +5,10 @@ const { validationResult } = require('express-validator');
 const controller={
 
     adminHome: async(req,res) => {
-       const products= await db.Product.findAll()
+       const products= await db.Product.findAll({
+        include: [{ association: 'category' },{ association: 'brand' }],
+    });
+       
        return res.render(path.join(__dirname,'../views/admin/listaProductos.ejs'),{products});
     },
     newProducto: async(req,res) => {
@@ -25,6 +28,10 @@ const controller={
         image: req.file.filename
       });
       return res.redirect('/admin');
+  },
+  listaUsuarios: async(req, res) => {
+    const usuarios = await db.User.findAll();
+    return res.render(path.join(__dirname,'../views/admin/listaUsuarios.ejs'),{usuarios})
   }
 }
 module.exports=controller; 

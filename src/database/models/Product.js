@@ -56,14 +56,10 @@ module.exports =(sequelize,dataTypes)=>{
             as:'mascota',
             foreignKey:'idMascota'
         })
-
-        Product.belongsToMany(models.Category,{
-            as:'category',
-            through:'categoryproducts',
-            foreignKey:'idProduct',
-            otherKey:'idCategory',
-            timestamps: false
-        }) 
+        Product.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "idCategory"
+        })
     }
 
     

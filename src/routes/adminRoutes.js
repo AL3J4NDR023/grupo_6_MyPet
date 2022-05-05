@@ -10,6 +10,7 @@ router.get('/newproducto',authAdmin,controller.newProducto);
 router.post('/nuevo',upload.single('image'),authAdmin,controller.create);
 //router.post('/registro',controller.registroProducto);
 
+router.get('/listaUsuarios',authAdmin,controller.listaUsuarios);
 
 
 /** new and create product  */

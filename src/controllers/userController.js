@@ -81,8 +81,52 @@ const controller={
             req.session.destroy();
             res.redirect('/');
         },
-        profile: (req,res)=>{
-            res.render(path.join(__dirname, '../views/users/profile.ejs'))
+        profile: async (req,res)=>{
+            //console.log( req.session.userLogin.id);
+             const id= req.session.userLogin.id
+            const user= await db.User.findOne({
+                where: {
+                    id: id
+                } ,
+                raw: true, // convertir en obeto
+                nest: true,
+            })
+            delete user.password;
+            
+            console.log(user);
+           res.render(path.join(__dirname, '../views/users/profile.ejs'),{user})
+        },
+        profileEdit: async (req,res)=>{
+            //console.log( req.session.userLogin.id);
+            const id= req.session.userLogin.id
+            const user= await db.User.findOne({
+                where: {
+                    id: id
+                } ,
+                raw: true, // convertir en obeto
+                nest: true,
+            })
+            delete user.password;
+            
+            res.render(path.join(__dirname, '../views/users/editarProfile.ejs'),{user})
+        },
+        profileEditanto: async(req, res)=>{
+            const id= req.session.userLogin.id;
+            console.log( id)
+            
+            
+            const {name,lastname,address,cellphone}=req.body;
+            if(req.file){
+                await db.User.update({
+                   name,lastname,address,cellphone,
+                   image:req.file.filename
+                },{where:{id:id}})
+            }else{
+                await db.User.update({
+                    name,lastname,address,cellphone
+                 },{where:{id:id}})  
+            }
+            res.redirect('/user/profile/')
         }
       
       

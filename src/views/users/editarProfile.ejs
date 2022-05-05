@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mypet</title>
+  <title>Document</title>
   <%- include('../partials/head')%>
 </head>
 <body>
@@ -15,7 +15,7 @@
       <div class="container">
         <div class="abs-center">
           <h3 class="mt-5 mb-5">Mi cuenta</h3>
-          <div class="row container d-flex flex-row bd-highlight mb-3 mt-6  ">
+          <div class="row container d-flex flex-row bd-highlight mb-3  ">
             <div class="col-xl-7 col-md-12 w-100">
               <div class="card user-card-full">
                 <div class="row m-l-0 m-r-0 ">
@@ -32,28 +32,30 @@
                          <div class="col-sm-8">
                            <h2 class="text-center">Datos De La Cuenta</h2>
                             <div class="card-block">
-                              <div  class="p-2 mt-1">
+                              <form action="/user/profile/editando?_method=PUT" method="post" enctype="multipart/form-data" class="p-2 mt-1">
                                 <div class="form-group">
                                   <label for="name">Nombre</label>
-                                  <input disabled type="text" name="name" id="name"placeholder="Nombres" class="form-control" value="<%=user.name%>">
+                                  <input type="text" name="name" id="name"placeholder="Nombres" class="form-control" value="<%=user.name%>">
                                 </div>
                                 <div class="form-group">
                                   <label for="lastName">Apellidos</label>
-                                  <input disabled type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<%=user.lastname%>">
+                                  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<%=user.lastname%>">
                                 </div>
                                 <div class="form-group">
                                   <label for="lastName">Dirección</label>
-                                  <input disabled type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%=user.address%>">
+                                  <input type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%=user.address%>">
                                 </div>
                                 <div class="form-group">
                                   <label for="lastName">Telefono</label>
-                                  <input disabled disabled type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%=user.cellphone%>">
+                                  <input type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%=user.cellphone%>">
                                 </div>
-                               
+                                <div class="form-group">
+                                  <p class="btnAvatar">Cambiar avatar</p>
+                                <input class="uploadAvatar" type="file" name="image"  accept="image/*" value="<%=user.image%>">
+                                </div>
                                 
-                                <a href="/user/profile/edit"><button class="mt-1 btn btn-primary">Editar</button></a>
-                               
-                              </div>
+                                <button class="mt-1 btn btn-primary" type="submit">Editar</button>
+                              </form>
                               </div>
                            </div>
                        </div>
@@ -69,10 +71,3 @@
   <%- include('../partials/footer.ejs')%>
 </body>
 </html>
-
-
-
-
-
- 
-  
