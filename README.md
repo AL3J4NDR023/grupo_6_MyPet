@@ -34,3 +34,8 @@
 #### Para implementar la base de datos se debe crear un esquema de nombre "mypet" donde se corran los archivos adjuntos tablas.sql con el cual se crean las tablas de la base de datos y inserciones.sql con el cual se poblan las mismas
 
 ## Todos trabajamos en el sprint 6
+
+## Llevar la base datos sea phpMyAdmin o MySQL Workbench 
+## Crear la base de dato y exportar el archivo mypet.sql
+## hacer un node install
+## para correr el proyecto es con el comando npm start

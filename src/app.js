@@ -47,6 +47,7 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/admin', adminRouter);
 app.use('/producto', productoRoutes);
+app.use('/api', productApi);
 //app.use('/users', usersRouter);
 
 //API
