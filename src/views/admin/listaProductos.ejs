@@ -38,9 +38,9 @@
 					<td><img src="/images/products/<%= product.image%> " height="60rem" width="60rem" class="img-fluid rounded-circle"></td>
 					<td>
 						<div class="d-flex gap-2">
-						<a class="link_edit" href="/products/edit/<%=product.id%>"><button class="btn btn-success">Editar</button></a>
+						<a class="link_edit" href="/admin/editarproducto/<%=product.id%>"><button class="btn btn-success">Editar</button></a>
 
-						<form action="/products/delete/<%=product.id%>?_method=delete" method="POST">
+						<form action="/admin/delete/<%=product.id%>?_method=delete" method="POST">
 							<button type="submit"class="btn btn-danger">Borrar</button>
 						</form>
 					</div>

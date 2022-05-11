@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%- include('../partials/head')%>
+</head>
+<body>
+  <div>
+  <%- include('../partials/header.ejs')%>
+</div>
+    <main>
+      <div class="container">
+        <div class="abs-center">
+          <h3 class="mt-5 mb-5">Mi cuenta</h3>
+          <div class="row container d-flex flex-row bd-highlight mb-3  ">
+            <div class="col-xl-7 col-md-12 w-100">
+              <div class="card user-card-full">
+                <div class="row m-l-0 m-r-0 ">
+                  <div class="col-md-4 bg-c-lite-green user-profile">
+                    <div class="card-block text-center text-white">
+                      <div class="m-b-25 mt-2">
+                        <img src="/images/users/<%=usuarioAEditar.image%>" alt="avatarImage"  class="img-fluid rounded-circle"  height="200rem" width="200rem"  >
+                      </div>
+                      
+                    </div>
+                    <h2 class="text-center"><%=usuarioAEditar.name%></h2> 
+                    <h3 class="text-center"><%=usuarioAEditar.email%></h3> 
+                  </div>
+                         <div class="col-sm-8">
+                           <h2 class="text-center">Datos De La Cuenta</h2>
+                            <div class="card-block">
+                              <form action="/admin/editarusuario/<%=usuarioAEditar.id%>?_method=PUT" method="post" enctype="multipart/form-data" class="p-2 mt-1">
+                                <div class="form-group">
+                                  <label for="name">Nombre</label>
+                                  <input type="text" name="name" id="name"placeholder="Nombres" class="form-control" value="<%=usuarioAEditar.name%>">
+                                </div>
+                                <div class="form-group">
+                                  <label for="lastName">Apellidos</label>
+                                  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<%=usuarioAEditar.lastname%>">
+                                </div>
+                                <div class="form-group">
+                                  <label for="lastName">Dirección</label>
+                                  <input type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%=usuarioAEditar.address%>">
+                                </div>
+                                <div class="form-group">
+                                  <label for="lastName">Telefono</label>
+                                  <input type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%=usuarioAEditar.cellphone%>">
+                                </div>
+                                
+                                <div class="form-group">
+                                  <p class="btnAvatar">Cambiar avatar</p>
+                                <input class="uploadAvatar" type="file" name="image"  accept="image/*" value="<%=usuarioAEditar.image%>">
+                                </div>
+                                
+                                <button class="mt-1 btn btn-primary" type="submit">Editar</button>
+                              </form>
+                              </div>
+                           </div>
+                       </div>
+                  </div>
+                 </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </main>
+    
+  <%- include('../partials/footer.ejs')%>
+</body>
+</html>

@@ -1,7 +1,7 @@
 module.exports =(sequelize,dataTypes)=>{
     const alias= 'Mascota';
     const cols={
-        idMascota:{
+        id:{
             type: dataTypes.INTEGER(11),
             primaryKey: true, 
             allowNull: false,
@@ -18,11 +18,9 @@ module.exports =(sequelize,dataTypes)=>{
     }
     const Mascota=sequelize.define(alias,cols,config);
    Mascota.associate=function(models){
-       Mascota.belongsToMany(models.Product,{
-            as:'mascota',
-            through:'mascotaproducts',
-            foreignKey:'idMascota',
-            timestamps: false
+       Mascota.hasMany(models.Product,{
+            as:'products',
+            foreignKey:'idMascota'
         })
     }
     return Mascota; 

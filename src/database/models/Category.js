@@ -1,7 +1,7 @@
 module.exports =(sequelize,dataTypes)=>{
     const alias= 'Category';
     const cols={
-        idCategory:{
+        id:{
             type: dataTypes.INTEGER(11),
             primaryKey: true, 
             allowNull: false,
