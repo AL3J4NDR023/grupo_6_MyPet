@@ -9,7 +9,7 @@ const registroValidacion = require('../middlewares/validacion/registroUsuarioAdm
 const controller = require('../controllers/adminController');
 router.get('/',authAdmin,controller.adminHome);
 router.get('/newproducto',authAdmin,controller.newProducto);
-router.post('/nuevo',uploadProduct.single('imageProduct'),authAdmin,controller.create);
+router.post('/nuevo',uploadProduct.single('image'),authAdmin,controller.create);
 //router.post('/registro',controller.registroProducto);
 router.get('/editarproducto/:id',authAdmin,controller.editarproducto);
 router.post('/editarproducto/:id',uploadProduct.single('image'),authAdmin,controller.updateproducto);
