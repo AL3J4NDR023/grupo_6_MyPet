@@ -2,10 +2,17 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
+
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
 -- Servidor: 127.0.0.1
 -- Tiempo de generación: 22-04-2022 a las 03:29:53
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
+
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -90,7 +97,7 @@ CREATE TABLE `cartproducts` (
 --
 
 CREATE TABLE `category` (
-  `idCategory` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -98,7 +105,7 @@ CREATE TABLE `category` (
 -- Volcado de datos para la tabla `category`
 --
 
-INSERT INTO `category` (`idCategory`, `name`) VALUES
+INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'Alimentos'),
 (2, 'Accesorios'),
 (3, 'Snacks'),
@@ -113,7 +120,7 @@ INSERT INTO `category` (`idCategory`, `name`) VALUES
 --
 
 CREATE TABLE `mascota` (
-  `idMascota` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -121,7 +128,7 @@ CREATE TABLE `mascota` (
 -- Volcado de datos para la tabla `mascota`
 --
 
-INSERT INTO `mascota` (`idMascota`, `name`) VALUES
+INSERT INTO `mascota` (`id`, `name`) VALUES
 (1, 'Perro'),
 (2, 'Gatos'),
 (3, 'Mixto');
@@ -282,13 +289,13 @@ ALTER TABLE `cartproducts`
 -- Indices de la tabla `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`idCategory`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  ADD PRIMARY KEY (`idMascota`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `products`
@@ -338,13 +345,13 @@ ALTER TABLE `cartproducts`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `idMascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
@@ -386,8 +393,8 @@ ALTER TABLE `cartproducts`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `FK_79e02a52-71a2-45dc-8649-e77bf4404a58` FOREIGN KEY (`idBrand`) REFERENCES `brands` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`idMascota`) REFERENCES `mascota` (`idMascota`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`idCategory`) REFERENCES `category` (`idCategory`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`idMascota`) REFERENCES `mascota` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`idCategory`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `users`
