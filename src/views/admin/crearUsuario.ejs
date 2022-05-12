@@ -41,7 +41,7 @@
                    
                   <div class="form-floating mt-1 mb-1">
                     <input type="text" class="form-control" id="address" name="address" placeholder="Direccion" value="<%= locals.old ? old.address: null %>">
-                    <label for="lastName">Dirección</label>
+                    <label for="address">Dirección</label>
                   </div>
                   <% if (locals.errors && errors.address) { %>
                       <div class="alert alert-danger">
@@ -52,7 +52,7 @@
                    
                   <div class="form-floating mt-1 mb-1">
                     <input type="number" class="form-control" id="cellphone" name="cellphone" placeholder="telefono"value="<%= locals.old ? old.cellphone: null %>">
-                    <label for="lastName">Telefono</label>
+                    <label for="cellphone">Telefono</label>
                   </div>
                   
                   <% if (locals.errors && errors.cellphone) { %>

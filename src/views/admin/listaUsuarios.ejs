@@ -39,9 +39,9 @@
                     
 					<td>
 						<div class="d-flex gap-2">
-						<a class="link_edit" href="/products/edit/<%=usuario.id%>"><button class="btn btn-success">Editar</button></a>
+						<a class="link_edit" href="/admin/editarusuario/<%=usuario.id%>"><button class="btn btn-success">Editar</button></a>
 
-						<form action="/usuarios/delete/<%=usuario.id%>?_method=delete" method="POST">
+						<form action="/admin/deleteusuario/<%=usuario.id%>?_method=delete" method="POST">
 							<button type="submit"class="btn btn-danger">Borrar</button>
 						</form>
 					</div>

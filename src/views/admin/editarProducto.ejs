@@ -7,37 +7,38 @@
 	<%- include('./partials/header')%>
 	<section id="container" class="container mt-2 mb-2 w-50">
 	<main>
-		<h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Crear Producto</h2>
-		<form class="px-2  rounded-1" action="/admin/create" method="POST" enctype="multipart/form-data" style="background-color:#edf5f5">
+		<h2 class="text-center rounded-2 mt-1 text-white" style="background-color:#071013">Editar Producto</h2>
+		<form class="px-2  rounded-1" action="/admin/editarproducto/<%=productoAEditar.id%>" method="POST" enctype="multipart/form-data" style="background-color:#edf5f5">
         
         
 			<div class="input-group mb-3">
 				<span class="input-group-text mt-2" id="basic-addon1">Nombre</span>
-				<input type="text" class="form-control mt-2" placeholder="Nombre del producto" name="name">
+				<input type="text" class="form-control mt-2" placeholder="Nombre del producto" name="name" value="<%=productoAEditar.name%>" >
 			  </div>
 			  
 			  <div class="input-group mb-3">
 				<span class="input-group-text">$</span>
-				<input type="number" class="form-control" min="1" placeholder="Precio del producto"name="price">
+				<input type="number" class="form-control" min="1" placeholder="Precio del producto"name="price" value="<%=productoAEditar.price%>">
 				<span class="input-group-text">.00</span>
 			  </div>
 			  <div class="input-group mb-3">
 				<span class="input-group-text">Cantidad</span>
-				<input type="number" class="form-control" min="1" placeholder="Cantidad del producto"name="amount">
+				<input type="number" class="form-control" min="1" placeholder="Cantidad del producto"name="amount" value="<%=productoAEditar.amount%>">
 			  </div>
 			  
 			  <label for="basic-url" class="form-label text-decoration-underline ">Imagen Del Producto</label>
 			  <div class="input-group mb-3">
-				<input type="file" class="form-control" name="image">
+				<input type="file" class="form-control" name="image" value="<%=productoAEditar.image%>">
 			  </div>
-			  
+						  		  
 			  <div class="input-group mb-3">
 				<span class="input-group-text ">Descripción</span>
-				<textarea class="form-control "name="description"></textarea>
+				<textarea class="form-control "name="description" value="<%=productoAEditar.description%>"></textarea>
 			  </div>
+						  
 			  <div class="input-group mb-3">
 				<span class="input-group-text">Colores</span>
-			  <select class="form-select" name="color">
+			  <select class="form-select" name="color" value="<%=productoAEditar.color%>">
 				<option selected>Ninguno</option>
 				<option value="1">Azul</option>
 				<option value="2">Negro</option>
@@ -46,7 +47,7 @@
 			</div>
 			  <div class="input-group mb-3">
 				<span class="input-group-text">Marca</span>
-			  <select class="form-select" name="color">
+			  <select class="form-select" name="brand" value="<%=productoAEditar.brand%>">
 				<% for( let i = 0; i < brand.length; i++ ){%>
 					<option value="<%=brand[i].id%>"><%=brand[i].name%></option>
 					<%}%>
@@ -54,7 +55,7 @@
 			</div>
 			  <div class="input-group mb-3">
 				<span class="input-group-text">Mascota</span>
-			  <select class="form-select" name="color">
+			  <select class="form-select" name="mascota" value="<%=productoAEditar.mascota%>">
 				<% for( let i = 0; i < mascota.length; i++ ){%>
 					<option value="<%=mascota[i].id%>"><%=mascota[i].name%></option>
 					<%}%>
@@ -62,13 +63,13 @@
 			</div>
 			  <div class="input-group mb-3">
 				<span class="input-group-text">Categoria</span>
-			  <select class="form-select" name="category">
+			  <select class="form-select" name="category" value="<%=productoAEditar.category%>">
 				<% for( let i = 0; i < category.length; i++ ){%>
 					<option value="<%=category[i].id%>"><%=category[i].name%></option>
 					<%}%>
 			  </select>
 			</div>
-			<button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Crear Producto</button>
+			<button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Editar Producto</button>
 		</form>
 	</section>
 	</main>

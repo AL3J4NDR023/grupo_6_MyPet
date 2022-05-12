@@ -69,7 +69,7 @@ const controller={
                     address,
                     cellphone,
                     password: bcrypt.hashSync(password,10),
-                    idRol:1,
+                    idRol:2,
                     image: req.file.filename
                     
                  })

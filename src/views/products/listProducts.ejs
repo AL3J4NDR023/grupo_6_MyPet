@@ -42,7 +42,7 @@
 					<td><%= product.amount%></td>
 					<td><img src='#'></td>
 					<td>
-						<a class="link_edit" href="/products/edit/<%=product.id%>"><i class="fas fa-edit"></i></a>
+						<a class="link_edit" href="/admin/editarproducto/<%=productoAEditar%>?_method=PUT"><i class="fas fa-edit"></i></a>
 
 						<form action="/products/delete/<%=product.id%>?_method=delete" method="POST">
 							<button type="submit"class="delete"><i class="fas fa-trash-alt"></i></button>

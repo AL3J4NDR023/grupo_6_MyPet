@@ -30,6 +30,50 @@ const controller={
       });
       return res.redirect('/admin');
   },
+  editarproducto:async(req, res) => {
+    
+    const productoAEditar = await db.Product.findByPk(req.params.id);
+
+    const category= await db.Category.findAll();
+    const mascota= await db.Mascota.findAll();
+    const brand= await db.Brand.findAll({order:[['name']]});
+        return res.render(path.join(__dirname,'../views/admin/editarProducto.ejs'),{productoAEditar,category,mascota,brand});
+  },
+  updateproducto:async(req,res)=>{
+    const {name,price,amount,description,color,brand,mascota,category} = req.body;
+    console.log(req.body)
+    if(req.file){
+      await db.Product.update({name,price,amount,description,color,
+        idBrand:parseInt(brand),
+        idMascota:parseInt(mascota),
+        idCategory:parseInt(category),
+        image:req.file.filename 
+      },{
+        where:{
+          id:req.params.id
+        }})
+      }else{
+        await db.Product.update({name,price,amount,description,color,
+          idBrand:parseInt(brand),
+          idMascota:parseInt(mascota),
+          idCategory:parseInt(category),
+        },{
+          where:{
+            id:req.params.id
+          }})
+      } 
+      
+    return res.redirect('/admin');
+  },
+  deleteproducto:async(req,res)=>{
+    db.Product.destroy({
+      where:{
+        id:req.params.id
+      }
+    })
+    return res.redirect('/admin');
+  },
+  
   listaUsuarios: async(req, res) => {
     const usuarios = await db.User.findAll({
       include: [{ association: 'rol' },]
@@ -64,6 +108,47 @@ const controller={
      })
         return res.redirect('/');
     }
+  },
+  editarusuario:async(req, res) => {
+    
+    const usuarioAEditar = await db.User.findByPk(req.params.id);
+ //   const rol= await db.Rol.findAll();
+    delete usuarioAEditar.password;
+    delete usuarioAEditar.email;
+    delete usuarioAEditar.rol;
+        res.render(path.join(__dirname,'../views/admin/editarUser.ejs'),{usuarioAEditar});
+
+  },
+  updateusuario:async(req,res)=>{
+    const {name,lastname,address,cellphone} = req.body;
+    console.log(req.body)
+    if(req.file){
+      await db.User.update({name,lastname,address,cellphone,
+        //idRol:parseInt(rol),
+        image:req.file.filename 
+      },{
+        where:{
+          id:req.params.id
+        }})
+      }else{
+        await db.User.update({name,lastname,address,cellphone,
+         // idRol:parseInt(rol),
+    
+        },{
+          where:{
+            id:req.params.id
+          }})
+      } 
+      
+    return res.redirect('/admin/listaUsuarios');
+  },
+  deleteusuario:async(req,res)=>{
+    db.User.destroy({
+      where:{
+        id:req.params.id
+      }
+    })
+    return res.redirect('/admin/listaUsuarios');
   }
   
 }
