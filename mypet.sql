@@ -2,17 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
-
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-04-2022 a las 03:29:53
+-- Tiempo de generación: 12-05-2022 a las 04:02:40
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
-
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -25,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `mypet`
+-- Base de datos: `mypet1`
 --
 
 -- --------------------------------------------------------
@@ -166,16 +159,15 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`, `amount`, `description`,
 (50, 'Alimento Para Gato - Agility Gold Esterilizados', 30000, 'product7.webp', 18, '- Movilización de grasas. - Reducción calórica. - Control de bolas de pelo. - Favorece la salud renal.', NULL, 2, 2, 1),
 (51, 'Alimento para gato -Hills Felino K/D 4 Lb', 65000, 'product8.webp', 2, 'Protege la función del riñón y el corazón de vital importancia. Es compatible con la capacidad natural del gato para aumentar la masa muscular diaria. Estimula el apetito y aumenta el consumo de calorías.', NULL, 13, 2, 1),
 (52, 'Arnes Primo Militar Para Perro', 150000, 'product9.webp', 8, ' Talla XL ideal para perros de 30 a 40 KG. - Medidas de contorno 76 cm min/97 cm max. - Adecuado para perros medianos y grandes; material hipoalergénico, impermeable, duradero y fabricado en Italia. Su diseño único y ergonómico lo hace totalmente cómodo.', NULL, 5, 1, 2),
-(53, 'Laberinto Para Gato', 105000, 'product10.webp', 1, 'Producto bajo revisión de inventario, tiempo estimado de entrega de 5 a 8 días hábiles. - Juguete inteligente que estimula a los gatos a trabajar por su comida. - Con 6 actividades divertidas.', 'Blanco y verde', 6, 2, 2),
+(53, 'Laberinto Para Gato', 105000, 'product10.webp', 1, 'Producto bajo revisión de inventario, tiempo estimado de entrega de 5 a 8 días hábiles. - Juguete inteligente que estimula a los gatos a trabajar por su comida. - Con 6 actividades divertidas.', 'Blanco y verde', 6, 2, 4),
 (54, 'Galletas Natural Value Potato And Chicken Para Perro', 11100, 'product11.webp', 11, 'Tu mascota anhelará estos bocadillos CRUJIENTES y deliciosos Con MENOS DE 10 CALORIAS por bocadillo, son el bocadillo de entrenamiento perfecto o un bocadillo para cualquier momento. No contienen maíz, soja ni glicerina. Estas golosinas crujientes son perfectas para perros de cualquier edad o tamaño.', NULL, 4, 1, 1),
 (55, 'Galletas Kanu Hairball Control Para Gato', 7500, 'product12.webp', 12, ' Cada bocado tiene un tamaño aproximado de 8mm x 1,3cm. Para Kanú es vital brindarle a nuestras mascotas no solo sabor sino también nutrición. Nuestro Snack Kanú Hairball Control es un delicioso alimento complementario a base de ingredientes 100% naturales como el extracto de malta, carne, levadura y más, que ayudan a controlar las molestas bolas de pelos.', NULL, 1, 2, 3),
-(56, 'Galletas Kanu Hairball Control Para Gato', 7500, 'product12.webp', 12, ' Cada bocado tiene un tamaño aproximado de 8mm x 1,3cm. Para Kanú es vital brindarle a nuestras mascotas no solo sabor sino también nutrición. Nuestro Snack Kanú Hairball Control es un delicioso alimento complementario a base de ingredientes 100% naturales como el extracto de malta, carne, levadura y más, que ayudan a controlar las molestas bolas de pelos.', NULL, 1, 2, 3),
 (57, ' Peluche Roughskin Mico Medium Para Perro', 63000, 'product13.webp', 5, 'KONG RoughSkinz Suedez están diseñados para brindar durabilidad al mismo tiempo que recompensan el comportamiento de masticación adecuado y brindan una diversión duradera.', NULL, 6, 1, 2),
 (58, 'Catit Senses 2.0 Circuito de Juego Para Gato', 94800, 'product14.webp', 7, 'Producto bajo revisión de inventario, tiempo estimado de entrega de 5 a 8 días hábiles. Incluye el circuito de 5 tramos, 2 piezas de cierre y 1 pelota. ', NULL, 6, 2, 2),
 (59, 'Ciclorac X 120 Ml para todas', 26500, 'product15.webp', 9, 'Ciclorac elimina el 99,9% de la carga microbiana. Fórmula incolora que no mancha la piel de las mascotas. No requiere enjuague. Para el tratamiento de cualquier tipo de heridas crónicas y complejas con y sin infección asociada. NO causa daño en piel y tejidos. ', NULL, 8, 3, 5),
 (60, 'Organew Para Todas', 19600, 'product16.webp', 12, 'Suplemento nutricional que tiene aminoácidos , vitaminas , probióticos y prebióticos , para la reposición de la flora gastro intestinal.', NULL, 9, 3, 5),
 (61, 'Dinky Spray Para Peinar Con Argan Mascotas', 44300, 'product17.webp', 21, 'Con la sofisticada fórmula de nuestro nuevo Spray Brillo y Reparación con Argán, reduce la resequedad de la piel de tu #AmigoFiel, recuperando el brillo sensacional de su pelaje y previniendo su envejecimiento, además ¡Te deleitarás con su exquisita fragancia!', NULL, 12, 3, 6),
-(62, 'Perfume Para Machos Esbelt para todos', 25900, 'product18.webp', 13, 'El agradable Perfume para Machos permite que su mascota tenga un delicioso aroma. Con Aloe vera, Romero, Hamamelis.', NULL, 11, 3, 6);
+(62, 'Perfume Para Machos Esbelt para todos.', 25900, 'product18.webp', 13, '', 'Ninguno', 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -221,44 +213,43 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `cellphone`, `address`, `image`, `idRol`) VALUES
 (1, 'Luisa', 'Escobar', 'lui.fer@gmail.com', '$2a$10$euhkRY6EjmD0buA3Wl6dDeDy2/8JZxhdSdA6KjSu/x.SHdr10QzwG', 123456789, 'Carrera3 # 18- 45', 'Luisa.jpeg', 1),
-(2, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', '$2a$10$ekNk4P2IrcOIufIHtT7WwOGqCWixpUe4/xtKXCbSJn8wpddrW0Mb6', 123456789, 'Carrera 7 # 84- 72', 'user_2.jpg', 1),
-(3, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.jpg', 1),
-(4, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.jpg', 3),
-(5, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.jpg', 2),
-(6, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.jpg', 1),
-(7, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.jpg', 1),
-(8, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.jpg', 2),
-(9, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.jpg', 1),
-(10, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.jpg', 3),
+(2, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', '$2a$10$ekNk4P2IrcOIufIHtT7WwOGqCWixpUe4/xtKXCbSJn8wpddrW0Mb6', 123456789, 'Carrera 7 # 84- 72', 'user_2.png', 1),
+(3, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.png', 1),
+(4, 'william', 'Butchers zz', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.png', 3),
+(5, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.png', 2),
+(6, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.png', 1),
+(7, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.png', 1),
+(8, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.png', 2),
+(9, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.png', 1),
+(10, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.png', 3),
 (16, 'Luis Gabriel', 'Cortes Jacanamijoy', 'luiscortes@mypet.com', '$2b$10$OsTSOR7fZa193tZVM7kG5OvK1oUUXk43kPza/mEiB/2Yhj/JeOwS6', 30122, 'cra 3 # 7-30', 'user-Luis-Gabriel-luiscortes@mypet.com.png', 2),
 (17, 'william', 'muñoz', 'alex@hotmail.com', '$2a$10$q8Mfp.Nk5nc/foNRClrYVO4JeKhU4vPpKrTtVxR8ZzXPOe.ZPZYKW', 3000000, 'cra 3 # 7-30', 'user-william-alex@hotmail.com.png', 1),
-(31, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.jpg', 3),
-(32, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.jpg', 2),
-(33, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.jpg', 1),
-(34, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.jpg', 1),
-(35, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.jpg', 2),
-(36, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.jpg', 1),
-(37, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.jpg', 3),
+(31, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.png', 3),
+(32, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.png', 2),
+(33, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.png', 1),
+(34, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.png', 1),
+(35, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.png', 2),
+(36, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.png', 1),
+(37, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.png', 3),
 (38, 'Luisa', 'Escobar', 'lui.fer@gmail.com', 'luisaFda16*', 123456789, 'Carrera3 # 18- 45', 'Luisa.jpeg', 1),
-(39, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', 'gmuQ57HNsZzz0*', 123456789, 'Carrera 7 # 84- 72', 'user_2.jpg', 1),
-(40, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.jpg', 1),
-(41, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.jpg', 3),
-(42, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.jpg', 2),
-(43, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.jpg', 1),
-(44, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.jpg', 1),
-(45, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.jpg', 2),
-(46, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.jpg', 1),
-(47, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.jpg', 3),
+(39, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', 'gmuQ57HNsZzz0*', 123456789, 'Carrera 7 # 84- 72', 'user_2.png', 1),
+(40, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.png', 1),
+(41, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.png', 3),
+(42, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.png', 2),
+(43, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.png', 1),
+(44, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.png', 1),
+(45, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.png', 2),
+(46, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.png', 1),
+(47, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.png', 3),
 (48, 'Luisa', 'Escobar', 'lui.fer@gmail.com', 'luisaFda16*', 123456789, 'Carrera3 # 18- 45', 'Luisa.jpeg', 1),
-(49, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', 'gmuQ57HNsZzz0*', 123456789, 'Carrera 7 # 84- 72', 'user_2.jpg', 1),
-(50, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.jpg', 1),
-(51, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.jpg', 3),
-(52, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.jpg', 2),
-(53, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.jpg', 1),
-(54, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.jpg', 1),
-(55, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.jpg', 2),
-(56, 'Hortensia', 'Harby', 'hharby8@about.com', '8MAevZ4KN#', 123456789, 'Calle 10 No. 6-22', 'user_9.jpg', 1),
-(57, 'Franni', 'Schechter', 'fschechter9@people.com.cn', '2bHw2hufj*', 123456789, 'Calle 10 No. 5-25', 'user_10.jpg', 3);
+(49, 'Alejandro', 'Londoño', 'sweekly1@rediff.com', 'gmuQ57HNsZzz0*', 123456789, 'Carrera 7 # 84- 72', 'user_2.png', 1),
+(50, 'Luis', 'Cortes', 'aetteridge2@gnu.org', 'ZAWWERDmd987*', 123456789, 'Calle 11 No. 4 - 14', 'user_3.png', 1),
+(51, 'Will', 'Butchers', 'wbutchers3@blogspot.com', 'qvtmUBRu*87', 123456789, 'Carrera 7 # 84- 72', 'user_4.png', 3),
+(52, 'Kai', 'Assel', 'kassel4@disqus.com', 'I917VT8uPXI*54', 123456789, 'Calle 11 No. 4 - 14', 'user_5.png', 2),
+(53, 'Stephen', 'Wey', 'swey5@seattletimes.com', 'JnUycrZ*987', 123456789, 'Calle 10 No. 5-22', 'user_6.png', 1),
+(54, 'Katey', 'McInerney', 'kmcinerney6@hugedomains.com', 'r4vNVI*45', 123456789, 'Calle 10 No. 5-22', 'user_7.png', 1),
+(55, 'Pearla', 'Krebs', 'pkrebs7@gov.uk', '28ZkTOMgj5#', 123456789, 'Carrera 7 # 84- 72', 'user_8.png', 2),
+(59, 'admin', 'admin', 'admin123@mypet.com', '$2b$10$Ru24cbWKP2CWqUxKeQp5ierykDDwUynV8IX7RRjGUi9Ld8jU92ism', 12313, 'cra 3 # 7-30', 'user_2.png', 1);
 
 --
 -- Índices para tablas volcadas
@@ -369,7 +360,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- Restricciones para tablas volcadas

@@ -27,7 +27,7 @@
     <div class="p-2 bd-highlight text-center"><a href="/category/5" class="text-decoration-none text-reset"><img src="../images/categorias/categoria_higiene.jpg"class="img-fluid rounded-circle"><h3>Higiene</h3></a></div> 
   </div>
 
-  <h2 class="text-center mt-5">Nuevos Productos</h2>
+  <h2 class="text-center mt-5">Productos</h2>
   <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-2 mb-3 ">
     <% for( let i = 0; i < products.length; i++ ){%>
     <div class="col">
@@ -49,46 +49,7 @@
     
   
   </div>
-  <h2 class="text-center mt-5">KONG</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4 px-5 mt-2 mb-5 ">
-    <% for( let i = 0; i < kong.length; i++ ){%>
-    <div class="col">
-      
-      <div class="card h-100" >
-        <img src="../images/products/<%= kong[i].image%>" class="card-img-top mx-auto mt-3" style="width:50%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center"><%=kong[i].name%></h5>
-          <h5 class="card-title text-center">$<%=toThousand(kong[i].price)%></h5>
-          
-          <div class="position-absolute top-100 start-50 translate-middle"> <a href="/producto/detalle/<%=kong[i].id%>"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a></div>
-        
-        </div>
-        
-      </div>
-    </div>
-    <% } %>
-    
-    
-  
-  </div>
-  <h2 class="text-center mt-5">Otros Productos</h2>
-  <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-2 mb-3 ">
-    <% for( let i = 0; i < brand.length; i++ ){%>
-    <div class="col">
-      
-      <div class="card h-100" >
-        <img src="../images/products/<%= brand[i].image%>" class="card-img-top mx-auto mt-3" style="width:50%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center"><%=brand[i].name%></h5>
-          <h5 class="card-title text-center">$<%=toThousand(brand[i].price)%></h5>
-          
-          <div class="position-absolute top-100 start-50 translate-middle"> <a href="/producto/detalle/<%=brand[i].id%>"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a></div>
-        
-        </div>
-        
-      </div>
-    </div>
-    <% } %>
+ 
     
     
   

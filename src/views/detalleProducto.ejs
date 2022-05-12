@@ -17,7 +17,7 @@
           <h2 class="card-title "><%=product.name%></h2>
           <h3 class="fst-italic fs-4" ">Marca: <%=category.name%></h3>
           <h3 class="fst-italic fs-4" ">Disponibles: <%=product.amount%></h3>
-          <h3 class="text-center">$<%=product.price%></h3>
+          <h3 class="text-center">$<%=toThousand(product.price)%></h3>
          
             <div class="d-flex justify-content-center">
             <form action="" class="d-flex flex-column gap-2" >

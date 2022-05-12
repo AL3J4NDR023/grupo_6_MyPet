@@ -6,9 +6,7 @@ const { validationResult } = require('express-validator');
 const controller={
 
     adminHome: async(req,res) => {
-       const products= await db.Product.findAll({
-        include: [{ association: 'category' },{ association: 'brand' }],
-    });
+       const products= await db.Product.findAll({ include: [{ association: 'category' },{ association: 'brand' }]});
        
        return res.render(path.join(__dirname,'../views/admin/listaProductos.ejs'),{products});
     },
@@ -113,9 +111,9 @@ const controller={
     
     const usuarioAEditar = await db.User.findByPk(req.params.id);
  //   const rol= await db.Rol.findAll();
-    delete usuarioAEditar.password;
-    delete usuarioAEditar.email;
-    delete usuarioAEditar.rol;
+    delete usuarioAEditar.password
+    delete usuarioAEditar.email
+    delete usuarioAEditar.rol
         res.render(path.join(__dirname,'../views/admin/editarUser.ejs'),{usuarioAEditar});
 
   },

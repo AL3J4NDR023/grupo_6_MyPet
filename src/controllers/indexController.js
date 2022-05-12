@@ -6,16 +6,22 @@ const controller={
     
     home: async(req,res) => {
        const products= await db.Product.findAll({order:[['id','DESC']], limit:4})
-       const brand= await db.Product.findAll({limit:4, where: {idBrand:6}})
+       const kong= await db.Product.findAll({limit:4, where: {idBrand:6}})
+       const brand= await db.Product.findAll({limit:4})
        
-        return res.render('index.ejs',{products,brand})
+        return res.render('index.ejs',{products,brand,kong,toThousand})
     },
     detalle: async (req,res)=>{
         const id = req.params.id
         const product= await db.Product.findByPk(id)
         const category = await db.Brand.findByPk(product.idBrand)
-        return res.render('detalleProducto.ejs',{product,category})
+        return res.render('detalleProducto.ejs',{product,category,toThousand})
     
+    },
+    category: async (req,res) => {
+        const products= await db.Product.findAll({order:[['id','DESC']], where: {idCategory:req.params.id},include: [{ association: 'category' }]})
+       
+        return res.render('productsCategory.ejs',{products,toThousand})
     }
 
 }
