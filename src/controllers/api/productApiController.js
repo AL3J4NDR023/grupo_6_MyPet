@@ -1,70 +1,51 @@
-
 const db= require('../../database/models');
-const productApiController={
-    list: async (req, res) =>{
-        try{
-            const products = await db.Product.findAll();
-            const response={
-                meta:{
-                    status: 200,
-                    total:products.length,
-                    url:'api/products'
-                },
-                data: products
-                
-            }
-            return res.json(response);
-        } catch(error){
-            return res.json({error})
-        } 
-       
-    },
-    detail:async(req,res)=>{
-        try {
-        const product= await db.Product.findByPk(req.params.id);
-        const response={
-            meta: {
-                status: 200,
-                total:1,
-                url:'api/products/:id'
-            },
-            data:product
-        }
-       return  res.json(response);
-    } catch (error) {
-        return res.json({ error});
-    }
 
+const productApiController={
+    listaProductos:async(req,res)=>{
+        const products=await db.Product.findAll();
+        const categories=await db.Category.findAll();
+        const cbyCategory= await db.Category.findAll({include: [{ association: 'products' }]});
+        const response={
+            
+            count:products.length,
+            
+            countByCategory:cbyCategory.map((item)=>(
+                {
+                name:item.name,
+                count:item.products.length
+                }
+            )),
+            data: products.map((item)=>(
+                {id:item.id,
+                name:item.name,
+                description:item.description,
+                detail:'/api/products/'+item.id,
+                category:categories.find((element)=>(element.id==item.idCategory)).name
+            })),
+            
+            
+        }
+        res.json(response);
     },
-    create: async (req, res)=>{
-        
-        console.log(req.body.name);
-      console.log(req.body.price);
-        try {
-        const {name,price, amount,discount,idMascota,idCategory,description}=req.body;
-        const confirm = await db.Product.create({
-                name,
-                price,
-                amount,
-                discount,
-                category,
-                description,
-                idMascota,
-                idCategory
-          });
-          const response={
-            meta: {
-                status: 200,
-                total:1,
-                url:'api/products/create'
-            },
-            data:confirm
+    detalleProducto:async(req,res)=>{
+        const product= await db.Product.findByPk(req.params.id);
+        const categories=await db.Category.findAll();
+        const brands=await db.Brand.findAll();
+        const mascotas=await db.Mascota.findAll();
+        const response={
+            id:product.id,
+            name:product.name,
+            price:product.price,
+            amount:product.amount,
+            description:product.description,
+            color:product.color,
+            brand:[brands.find((element)=>(element.id==product.idBrand)).name],
+            category:[categories.find((element)=>(element.id==product.idCategory)).name],
+            mascota:[mascotas.find((element)=>(element.id==product.idMascota)).name],
+            urlImagen:'/apiImagen/product/imagen'+product.id
         }
        return  res.json(response);
-        } catch (error) {
-            return res.json({ error});
-        }
-    }
+    },
 }
 
-module.exports = productApiController;
+module.exports=productApiController;

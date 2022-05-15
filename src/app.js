@@ -12,6 +12,7 @@ const userRouter = require('./routes/userRoutes');
 const adminRouter = require('./routes/adminRoutes');
 const userLoggedAll= require('./middlewares/userLoggedAll');
 const productApi= require('./routes/api/productApiRoutes');
+const userApi= require('./routes/api/userApiRoutes');
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -47,11 +48,13 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/admin', adminRouter);
 app.use('/producto', productoRoutes);
-app.use('/api', productApi);
-//app.use('/users', usersRouter);
 
 //API
-//app.use('/api/products', productApi);
+app.use('/api/products',productApi);
+app.use('/api/users',userApi);
+//app.use('/api', productApi);
+//app.use('/users', usersRouter);
+
 
 
 // catch 404 and forward to error handler
